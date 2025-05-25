@@ -1,5 +1,5 @@
 import React from 'react';
-import { Share2 } from 'lucide-react';
+import { Share2, Facebook, Twitter, Instagram } from 'lucide-react';
 
 interface ShareButtonsProps {
   resultType: string;
@@ -21,6 +21,11 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, '_blank');
   };
 
+  const shareToInstagram = () => {
+    // Instagram doesn't have a direct share URL, but we can open Instagram app/website
+    window.open('https://www.instagram.com', '_blank');
+  };
+
   return (
     <div className="mt-8">
       <h3 className="flex items-center text-lg font-medium text-gray-700 mb-3">
@@ -30,15 +35,24 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
       <div className="flex gap-3">
         <button 
           onClick={shareToFacebook}
-          className="flex-1 py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-colors"
+          className="flex-1 py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-colors flex items-center justify-center gap-2"
         >
-          Facebook
+          <Facebook className="w-5 h-5" />
+          <span>Facebook</span>
         </button>
         <button 
           onClick={shareToTwitter}
-          className="flex-1 py-2 px-4 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#1A91DA] transition-colors"
+          className="flex-1 py-2 px-4 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#1A91DA] transition-colors flex items-center justify-center gap-2"
         >
-          Twitter
+          <Twitter className="w-5 h-5" />
+          <span>Twitter</span>
+        </button>
+        <button 
+          onClick={shareToInstagram}
+          className="flex-1 py-2 px-4 bg-[#E4405F] text-white rounded-lg hover:bg-[#D93A59] transition-colors flex items-center justify-center gap-2"
+        >
+          <Instagram className="w-5 h-5" />
+          <span>Instagram</span>
         </button>
         <button 
           onClick={shareToLine}
