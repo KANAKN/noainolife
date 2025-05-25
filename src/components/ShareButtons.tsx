@@ -27,7 +27,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
 
   return (
     <div className="mt-8">
-      <h3 className="flex items-center text-lg font-medium text-[#9d1939] mb-3">
+      <h3 className="flex items-center text-lg font-medium text-[#ffff30] mb-3">
         <Share2 className="w-5 h-5 mr-2" />
         結果をシェアする
       </h3>
