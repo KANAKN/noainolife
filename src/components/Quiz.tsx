@@ -97,7 +97,7 @@ const Quiz: React.FC = () => {
 
   const renderHeader = () => (
     <div className="text-center mb-12">
-      <div className="flex justify-end mb-4">
+      <div className="inline-block mb-4">
         <img 
           src="/no-ai-no-life-logo.png" 
           alt="NO AI, NO LIFE" 
