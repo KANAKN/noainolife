@@ -104,11 +104,11 @@ const Quiz: React.FC = () => {
           className="w-24 h-24 object-contain"
         />
       </div>
-      <div className="text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 justify-end">
+      <div className="text-left">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
           あなたのAI信仰度がわかる「No AI No Life診断」
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-2 justify-end">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-2">
           AIとどう向き合うかで、あなたの価値観が見えてくる。
           6つの質問に答えて、あなたのAI信仰度とタイプを診断。
         </p>
