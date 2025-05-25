@@ -34,13 +34,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
   return (
     <div className="w-full animate-fadeIn">
-      <div className="text-center mb-8">
-        <div 
-          className="inline-flex items-center justify-center mb-4 p-3 rounded-full"
-          style={{ backgroundColor: typeColor }}
-        >
-        </div>
-      </div>
 
       <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
         <div 
