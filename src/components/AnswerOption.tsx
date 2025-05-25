@@ -27,13 +27,14 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({ option, selected, onSelect 
 
   return (
     <button
-      className={`w-full p-4 mb-3 text-left rounded-lg transition-all duration-300 ${
+      className={`w-full p-4 text-left rounded-lg transition-all duration-300 ${
         selected 
           ? 'text-white shadow-md transform scale-[1.02]' 
           : 'bg-white/10 text-white border border-white/20 hover:border-white/40 hover:shadow-sm'
       }`}
       style={{
-        backgroundColor: selected ? backgroundColor : undefined
+        backgroundColor: selected ? backgroundColor : undefined,
+        marginBottom: '0.75rem'
       }}
       onClick={() => onSelect(option)}
     >
