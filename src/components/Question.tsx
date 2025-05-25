@@ -11,7 +11,7 @@ interface QuestionProps {
 const Question: React.FC<QuestionProps> = ({ question, selectedOption, onSelectOption }) => {
   return (
     <div className="w-full animate-fadeIn">
-      <h2 className="text-xl md:text-2xl font-medium text-gray-800 mb-6">
+      <h2 className="text-xl md:text-2xl font-medium text-white mb-6">
         {question.text}
       </h2>
       <div className="space-y-3">
