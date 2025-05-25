@@ -35,7 +35,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
         <select
           value={gender}
           onChange={(e) => setGender(e.target.value)}
-          className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent bg-gray-50 hover:bg-gray-100 transition-colors"
+          className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent bg-gray-50 hover:bg-gray-100 transition-colors text-gray-700"
           required
         >
           <option value="">選択してください</option>
@@ -52,7 +52,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
         <select
           value={ageGroup}
           onChange={(e) => setAgeGroup(e.target.value)}
-          className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent bg-gray-50 hover:bg-gray-100 transition-colors"
+          className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent bg-gray-50 hover:bg-gray-100 transition-colors text-gray-700"
           required
         >
           <option value="">選択してください</option>
@@ -64,7 +64,8 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="w-full py-4 bg-gradient-to-r from-primary-600 to-accent-500 text-white text-lg font-bold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+        className="w-full py-4 bg-gradient-to-r from-primary-600 to-accent-500 text-white text-lg font-bold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none"
+        disabled={!gender || !ageGroup}
       >
         診断を始める
       </button>
