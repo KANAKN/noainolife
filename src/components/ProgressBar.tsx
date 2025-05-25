@@ -9,13 +9,11 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ currentStep, totalSteps }) =>
   const progress = (currentStep / totalSteps) * 100;
   
   return (
-    <div className="w-full bg-gray-100 rounded-full h-3 overflow-hidden shadow-inner">
+    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
       <div 
-        className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-500 ease-out rounded-full"
+        className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-500 ease-out"
         style={{ width: `${progress}%` }}
-      >
-        <div className="h-full w-full bg-gradient-to-b from-white/20 to-transparent" />
-      </div>
+      />
     </div>
   );
 };
