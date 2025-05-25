@@ -64,7 +64,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="w-full bg-gradient-to-r from-[#004aad] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+        className="w-full bg-gradient-to-r from-[#df71da] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
       >
         診断を始める
       </button>

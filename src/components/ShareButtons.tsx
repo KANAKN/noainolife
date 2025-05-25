@@ -25,7 +25,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, '_blank');
   };
 
-  const buttonClasses = "py-3 md:py-2 px-4 bg-gradient-to-r from-[#004aad] to-[#9d1939] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2";
+  const buttonClasses = "py-3 md:py-2 px-4 bg-gradient-to-r from-[#df71da] to-[#9d1939] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2";
 
   return (
     <div className="mt-8">
