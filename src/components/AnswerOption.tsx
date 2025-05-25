@@ -30,11 +30,27 @@ const AnswerOption: React.FC<AnswerOptionProps> = ({ option, selected, onSelect 
       className={`w-full p-4 text-left rounded-lg transition-all duration-300 ${
         selected 
           ? 'text-white shadow-md transform scale-[1.02]' 
-          : 'bg-white/10 text-white border border-white/20 hover:border-white/40 hover:shadow-sm'
+          : 'bg-white/10 text-white border border-white/20 hover:shadow-sm'
       }`}
       style={{
         backgroundColor: selected ? backgroundColor : undefined,
-        marginBottom: '0.75rem'
+        marginBottom: '0.75rem',
+        ':hover': {
+          backgroundColor: selected ? backgroundColor : `${backgroundColor}33`,
+          borderColor: selected ? undefined : backgroundColor
+        }
+      }}
+      onMouseOver={(e) => {
+        if (!selected) {
+          (e.currentTarget as HTMLButtonElement).style.backgroundColor = `${backgroundColor}33`;
+          (e.currentTarget as HTMLButtonElement).style.borderColor = backgroundColor;
+        }
+      }}
+      onMouseOut={(e) => {
+        if (!selected) {
+          (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+          (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        }
       }}
       onClick={() => onSelect(option)}
     >
