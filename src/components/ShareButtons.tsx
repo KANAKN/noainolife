@@ -17,13 +17,12 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
   };
   
+  const shareToInstagram = () => {
+    window.open('https://www.instagram.com', '_blank');
+  };
+  
   const shareToLine = () => {
     window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, '_blank');
-  };
-
-  const shareToInstagram = () => {
-    // Instagram doesn't have a direct share URL, but we can open Instagram app/website
-    window.open('https://www.instagram.com', '_blank');
   };
 
   return (
@@ -32,33 +31,33 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
         <Share2 className="w-5 h-5 mr-2" />
         結果をシェアする
       </h3>
-      <div className="flex gap-3">
+      <div className="flex flex-col md:flex-row gap-3">
         <button 
           onClick={shareToFacebook}
-          className="flex-1 py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-colors flex items-center justify-center gap-2"
+          className="py-3 md:py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-colors flex items-center justify-center gap-2"
         >
           <Facebook className="w-5 h-5" />
           <span>Facebook</span>
         </button>
         <button 
           onClick={shareToTwitter}
-          className="flex-1 py-2 px-4 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#1A91DA] transition-colors flex items-center justify-center gap-2"
+          className="py-3 md:py-2 px-4 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#1A91DA] transition-colors flex items-center justify-center gap-2"
         >
           <Twitter className="w-5 h-5" />
           <span>Twitter</span>
         </button>
         <button 
           onClick={shareToInstagram}
-          className="flex-1 py-2 px-4 bg-[#E4405F] text-white rounded-lg hover:bg-[#D93A59] transition-colors flex items-center justify-center gap-2"
+          className="py-3 md:py-2 px-4 bg-[#E4405F] text-white rounded-lg hover:bg-[#D93A59] transition-colors flex items-center justify-center gap-2"
         >
           <Instagram className="w-5 h-5" />
           <span>Instagram</span>
         </button>
         <button 
           onClick={shareToLine}
-          className="flex-1 py-2 px-4 bg-[#00B900] text-white rounded-lg hover:bg-[#009900] transition-colors"
+          className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:bg-[#009900] transition-colors flex items-center justify-center gap-2"
         >
-          LINE
+          <span>LINE</span>
         </button>
       </div>
     </div>
