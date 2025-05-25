@@ -29,7 +29,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
       <div className="mb-6">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block text-[#ffff30] text-sm font-bold mb-2">
           性別
         </label>
         <select
@@ -46,7 +46,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
       </div>
 
       <div className="mb-6">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block text-[#ffff30] text-sm font-bold mb-2">
           年齢
         </label>
         <select
@@ -64,7 +64,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+        className="w-full bg-gradient-to-r from-[#004aad] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
       >
         診断を始める
       </button>
