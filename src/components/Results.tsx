@@ -23,37 +23,56 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-lg font-semibold text-gray-600 mb-2">タイプ</h2>
-            <p className="text-2xl font-bold text-gray-800">{result.type}</p>
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+        <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6">
+          <h2 className="text-3xl font-bold text-white text-center">
+            {result.type}
+          </h2>
+        </div>
+        
+        <div className="p-8 space-y-8">
+          <div className="border-b border-gray-100 pb-6">
+            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+              キャッチコピー
+            </h3>
+            <p className="text-2xl font-bold text-gray-800">
+              {result.title}
+            </p>
+          </div>
+
+          <div className="border-b border-gray-100 pb-6">
+            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+              特徴と性格傾向
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {result.description}
+            </p>
+          </div>
+
+          <div className="border-b border-gray-100 pb-6">
+            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+              AIとの関係性
+            </h3>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {result.aiRelationship}
+            </p>
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-gray-600 mb-2">キャッチコピー</h2>
-            <p className="text-2xl font-bold text-gray-800">{result.title}</p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-semibold text-gray-600 mb-2">特徴と性格傾向</h2>
-            <p className="text-lg text-gray-700">{result.description}</p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-semibold text-gray-600 mb-2">AIとの関係性</h2>
-            <p className="text-lg text-gray-700">{result.aiRelationship}</p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-semibold text-gray-600 mb-2">注意点</h2>
-            <p className="text-lg text-gray-700">{result.cautionPoint}</p>
+            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+              注意点
+            </h3>
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {result.cautionPoint}
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-8 mb-6">
-        <h3 className="text-xl font-medium text-gray-800 mb-4">
+      <div className="bg-gray-50 rounded-xl p-8 mb-8">
+        <h3 className="text-xl font-bold text-gray-800 mb-6">
           あなたにおすすめのアイテム：
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -68,7 +87,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
       <div className="mt-10 text-center">
         <button
           onClick={onRestart}
-          className="px-6 py-3 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors"
+          className="px-6 py-3 bg-white text-gray-800 rounded-lg hover:bg-gray-100 transition-colors shadow-md hover:shadow-lg"
         >
           もう一度診断する
         </button>
