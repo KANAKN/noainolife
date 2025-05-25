@@ -27,58 +27,48 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
   const genders = ['男性', '女性', 'その他', '回答しない'];
 
   return (
-    <div className="w-[90%] md:w-[60%] mx-auto">
-      <div className="text-left mb-8">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
+      <div className="mb-6">
+        <label className="block text-gray-700 text-sm font-bold mb-2">
           性別
-        </h2>
-        <p className="text-gray-600">
-          診断結果の精度向上のため、以下の情報を入力してください。
-        </p>
-      </div>
-      <form onSubmit={handleSubmit} className="space-y-8">
-        <div>
-          <label className="block text-gray-700 text-lg font-medium mb-4">
-            性別
-          </label>
-          <select
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg"
-            required
-          >
-            <option value="">選択してください</option>
-            {genders.map((g) => (
-              <option key={g} value={g}>{g}</option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-gray-700 text-lg font-medium mb-4">
-            年齢
-          </label>
-          <select
-            value={ageGroup}
-            onChange={(e) => setAgeGroup(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-lg"
-            required
-          >
-            <option value="">選択してください</option>
-            {ageGroups.map((age) => (
-              <option key={age} value={age}>{age}</option>
-            ))}
-          </select>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-lg font-bold py-4 px-6 rounded-lg hover:opacity-90 transition-opacity shadow-md"
+        </label>
+        <select
+          value={gender}
+          onChange={(e) => setGender(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          required
         >
-          診断を始める
-        </button>
-      </form>
-    </div>
+          <option value="">選択してください</option>
+          {genders.map((g) => (
+            <option key={g} value={g}>{g}</option>
+          ))}
+        </select>
+      </div>
+
+      <div className="mb-6">
+        <label className="block text-gray-700 text-sm font-bold mb-2">
+          年齢
+        </label>
+        <select
+          value={ageGroup}
+          onChange={(e) => setAgeGroup(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          required
+        >
+          <option value="">選択してください</option>
+          {ageGroups.map((age) => (
+            <option key={age} value={age}>{age}</option>
+          ))}
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+      >
+        診断を始める
+      </button>
+    </form>
   );
 };
 
