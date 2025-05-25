@@ -27,7 +27,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
   const genders = ['男性', '女性', 'その他', '回答しない'];
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto bg-white p-8 rounded-2xl shadow-lg">
       <div className="mb-6">
         <label className="block text-gray-700 text-sm font-bold mb-2">
           性別
@@ -35,7 +35,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
         <select
           value={gender}
           onChange={(e) => setGender(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent bg-gray-50 hover:bg-gray-100 transition-colors"
           required
         >
           <option value="">選択してください</option>
@@ -45,14 +45,14 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
         </select>
       </div>
 
-      <div className="mb-6">
+      <div className="mb-8">
         <label className="block text-gray-700 text-sm font-bold mb-2">
           年齢
         </label>
         <select
           value={ageGroup}
           onChange={(e) => setAgeGroup(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent bg-gray-50 hover:bg-gray-100 transition-colors"
           required
         >
           <option value="">選択してください</option>
@@ -64,7 +64,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
       <button
         type="submit"
-        className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+        className="w-full py-4 bg-gradient-to-r from-primary-600 to-accent-500 text-white text-lg font-bold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
       >
         診断を始める
       </button>
