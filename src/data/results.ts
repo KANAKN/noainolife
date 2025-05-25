@@ -7,16 +7,16 @@ export const results: Result[] = [
     description: "効率重視。AIを冷静に分析し、役に立つかどうかを軸に判断するタイプ。AIを「便利な社員」としてフル活用し、感情は乗せず、機能重視で活用しています。ただし、柔軟性に欠けたり、人との関係で冷たく見られることもあるので注意が必要かもしれません。",
     recommendations: [
       {
-        title: "ChatGPT Plus",
-        description: "GPT-4搭載で、より高度な業務効率化を実現。ビジネスの現場で即戦力となる最新AIツール。",
-        imageUrl: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
-        affiliateLink: "https://example.com/chatgpt-plus"
+        title: "業務効率化AIツール特集",
+        description: "AI自動化ツール導入で作業時間を短縮しよう。最新のAI活用ツールで業務効率を劇的に改善。",
+        imageUrl: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
+        affiliateLink: "https://example.com/ai-productivity"
       },
       {
-        title: "AI Business School",
-        description: "AIを活用したビジネス戦略を学ぶ。実践的なケーススタディで即戦力のスキルを習得。",
-        imageUrl: "https://images.pexels.com/photos/5905700/pexels-photo-5905700.jpeg",
-        affiliateLink: "https://example.com/ai-business-school"
+        title: "Udemyビジネス入門",
+        description: "無料で始めるビジネススキル講座。AI時代に必要なスキルを効率的に習得。",
+        imageUrl: "https://images.pexels.com/photos/7063776/pexels-photo-7063776.jpeg",
+        affiliateLink: "https://example.com/udemy-business"
       }
     ]
   },
@@ -26,16 +26,16 @@ export const results: Result[] = [
     description: "感性で動くタイプ。AIに対しても「相棒」や「占い師」のような存在を求める傾向があります。AIを「心の支え」や「導き手」として捉え、ポエティックな視点でAIと接することが多いのが特徴です。ただし、情報の取捨選択が曖昧になり、フェイクにも影響されやすいことがあるので注意が必要です。",
     recommendations: [
       {
-        title: "AI占い師 Luna",
-        description: "AIが導く、あなただけの運命の道。毎日の運勢からライフプランまで、パーソナライズされた占いを提供。",
-        imageUrl: "https://images.pexels.com/photos/2117938/pexels-photo-2117938.jpeg",
-        affiliateLink: "https://example.com/ai-fortune-luna"
+        title: "恋AIナビ",
+        description: "相性診断や恋愛占いAIアプリで、あなたの運命の相手を見つけましょう。",
+        imageUrl: "https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg",
+        affiliateLink: "https://example.com/ai-love-fortune"
       },
       {
-        title: "AIジャーナリング",
-        description: "AIと一緒に書く日記で自己発見。感情分析で心の変化を可視化し、より良い未来へ導きます。",
-        imageUrl: "https://images.pexels.com/photos/6476808/pexels-photo-6476808.jpeg",
-        affiliateLink: "https://example.com/ai-journaling"
+        title: "香水定期便COLORIA",
+        description: "AIが選ぶ「あなたにぴったりな香水」をお届け。毎月の香りで新しい自分を発見。",
+        imageUrl: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
+        affiliateLink: "https://example.com/coloria-perfume"
       }
     ]
   },
@@ -45,16 +45,16 @@ export const results: Result[] = [
     description: "好奇心旺盛で探究心が強い。AIとの会話を通じて自己発見を楽しむタイプです。AIを「壁打ち相手」や「創造のパートナー」として活用し、アイデア出しに最適な存在として捉えています。ただし、情報過多になりがちで、まとまりを失うことがあるので注意が必要です。",
     recommendations: [
       {
-        title: "AI Art Studio Pro",
-        description: "AIと共創する新しいアート体験。あなたのインスピレーションを形にする、次世代のクリエイティブツール。",
-        imageUrl: "https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg",
-        affiliateLink: "https://example.com/ai-art-studio"
+        title: "Notion AI",
+        description: "アイデアを形にするAIサービス。思考を整理し、創造性を最大限に引き出します。",
+        imageUrl: "https://images.pexels.com/photos/7567444/pexels-photo-7567444.jpeg",
+        affiliateLink: "https://example.com/notion-ai"
       },
       {
-        title: "Mind AI Companion",
-        description: "24時間対話可能なAIパートナー。創造性を刺激し、新しいアイデアを共に育てます。",
-        imageUrl: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg",
-        affiliateLink: "https://example.com/mind-ai-companion"
+        title: "Canva Pro",
+        description: "デザイン×AIで自己表現。あなたのクリエイティビティを解放します。",
+        imageUrl: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+        affiliateLink: "https://example.com/canva-pro"
       }
     ]
   },
@@ -64,16 +64,16 @@ export const results: Result[] = [
     description: "AIや社会の圧に敏感で、慎重かつ回避的。でも自分なりの使い方を模索しているタイプです。AIを「監視者」でもあり「距離をとりたい存在」として捉え、必要最低限だけ使うスタンスを取っています。ただし、情報に背を向けすぎて、損をしてしまうことがあるので注意が必要です。",
     recommendations: [
       {
-        title: "Digital Detox Guide",
-        description: "AIと適度な距離を保ちながら、デジタルライフを快適に。メンタルヘルスを重視した新しいライフスタイルを提案。",
-        imageUrl: "https://images.pexels.com/photos/3560044/pexels-photo-3560044.jpeg",
-        affiliateLink: "https://example.com/digital-detox"
+        title: "副業スタートブック",
+        description: "個人で稼ぐスキルを身につける。AI時代に左右されない、自分らしい働き方を見つけましょう。",
+        imageUrl: "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg",
+        affiliateLink: "https://example.com/side-business-guide"
       },
       {
-        title: "プライバシーファースト",
-        description: "あなたのデジタルプライバシーを守る完全ガイド。AI時代を自分らしく生きるためのノウハウを解説。",
-        imageUrl: "https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg",
-        affiliateLink: "https://example.com/privacy-first"
+        title: "TechAcademy はじめての副業コース",
+        description: "Web知識ゼロから学べる。自分のペースでスキルアップを目指せます。",
+        imageUrl: "https://images.pexels.com/photos/5240547/pexels-photo-5240547.jpeg",
+        affiliateLink: "https://example.com/tech-academy"
       }
     ]
   }
