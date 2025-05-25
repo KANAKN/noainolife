@@ -25,6 +25,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, '_blank');
   };
 
+  const buttonClasses = "py-3 md:py-2 px-4 bg-gradient-to-r from-[#004aad] to-[#9d1939] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2";
+
   return (
     <div className="mt-8">
       <h3 className="flex items-center text-lg font-medium text-gray-700 mb-3">
@@ -34,28 +36,28 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
       <div className="flex flex-col md:flex-row gap-3">
         <button 
           onClick={shareToFacebook}
-          className="py-3 md:py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-colors flex items-center justify-center gap-2"
+          className={buttonClasses}
         >
           <Facebook className="w-5 h-5" />
           <span>Facebook</span>
         </button>
         <button 
           onClick={shareToTwitter}
-          className="py-3 md:py-2 px-4 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#1A91DA] transition-colors flex items-center justify-center gap-2"
+          className={buttonClasses}
         >
           <Twitter className="w-5 h-5" />
           <span>Twitter</span>
         </button>
         <button 
           onClick={shareToInstagram}
-          className="py-3 md:py-2 px-4 bg-[#E4405F] text-white rounded-lg hover:bg-[#D93A59] transition-colors flex items-center justify-center gap-2"
+          className={buttonClasses}
         >
           <Instagram className="w-5 h-5" />
           <span>Instagram</span>
         </button>
         <button 
           onClick={shareToLine}
-          className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:bg-[#009900] transition-colors flex items-center justify-center gap-2"
+          className={buttonClasses}
         >
           <span>LINE</span>
         </button>
