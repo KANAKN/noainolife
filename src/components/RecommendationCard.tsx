@@ -24,7 +24,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
           href={recommendation.affiliateLink} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="block w-full py-2 bg-gradient-to-r from-[#cb6ce6] to-[#9d1939] text-white text-center rounded-lg hover:opacity-95 transition-opacity"
+          className="block w-full py-2 bg-[#9d1939] text-white text-center rounded-lg hover:opacity-95 transition-opacity"
         >
           Learn More
         </a>
