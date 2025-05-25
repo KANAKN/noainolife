@@ -3,7 +3,7 @@ import Quiz from './components/Quiz';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+    <div className="min-h-screen bg-[#090034]">
       <Quiz />
     </div>
   );
