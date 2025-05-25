@@ -116,7 +116,7 @@ const Quiz: React.FC = () => {
         気づかなかった「自分らしさ」や「AIとの距離感」がわかるかも。
       </p>
       <p className="text-sm text-gray-400 max-w-2xl mx-auto">
-        診断結果はSNSでシェア！
+        診断結果はSNSでシェアしよう！
         #NoAINoLife診断 #AIタイプ診断 #生成AI
       </p>
     </div>
