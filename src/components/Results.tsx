@@ -15,16 +15,39 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'リアリスト型':
+        return '#004aad';
+      case 'ロマンチスト型':
+        return '#df71da';
+      case 'シンクロニスト型':
+        return '#8fff00';
+      case 'エスケーパー型':
+        return '#9d1939';
+      default:
+        return '#004aad';
+    }
+  };
+
+  const typeColor = getTypeColor(result.type);
+
   return (
     <div className="w-full animate-fadeIn">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center mb-4 p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
+        <div 
+          className="inline-flex items-center justify-center mb-4 p-3 rounded-full"
+          style={{ backgroundColor: typeColor }}
+        >
           <Sparkles className="w-8 h-8 text-white" />
         </div>
       </div>
 
       <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-        <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6">
+        <div 
+          className="p-6"
+          style={{ backgroundColor: typeColor }}
+        >
           <h2 className="text-3xl font-bold text-white text-center">
             {result.type}
           </h2>
@@ -32,7 +55,10 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         
         <div className="p-8 space-y-8">
           <div className="border-b border-gray-100 pb-6">
-            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+            <h3 
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
+              style={{ color: typeColor }}
+            >
               キャッチコピー
             </h3>
             <p className="text-2xl font-bold text-gray-800">
@@ -41,7 +67,10 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           </div>
 
           <div className="border-b border-gray-100 pb-6">
-            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+            <h3 
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
+              style={{ color: typeColor }}
+            >
               特徴と性格傾向
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -50,7 +79,10 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           </div>
 
           <div className="border-b border-gray-100 pb-6">
-            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+            <h3 
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
+              style={{ color: typeColor }}
+            >
               AIとの関係性
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -59,10 +91,19 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-purple-600 uppercase tracking-wider mb-2">
+            <h3 
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
+              style={{ color: typeColor }}
+            >
               注意点
             </h3>
-            <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+            <div 
+              className="border-l-4 p-4 rounded"
+              style={{ 
+                backgroundColor: `${typeColor}15`,
+                borderColor: typeColor
+              }}
+            >
               <p className="text-lg text-gray-700 leading-relaxed">
                 {result.cautionPoint}
               </p>
