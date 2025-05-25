@@ -26,7 +26,6 @@ const Quiz: React.FC = () => {
 
   const saveQuizResponse = async (response: QuizResponse) => {
     try {
-      // Insert quiz response
       const { data: quizResponse, error: responseError } = await supabase
         .from('quiz_responses')
         .insert([{
@@ -38,7 +37,6 @@ const Quiz: React.FC = () => {
 
       if (responseError) throw responseError;
 
-      // Insert answers
       const answers = response.answers.map(answer => ({
         response_id: quizResponse.id,
         question_id: answer.questionId,
@@ -97,27 +95,65 @@ const Quiz: React.FC = () => {
     setUserInfo(null);
   };
 
+  const renderHeader = () => (
+    <div className="text-center mb-12">
+      <div className="inline-block mb-4">
+        <img 
+          src="/no-ai-no-life-logo.png" 
+          alt="NO AI, NO LIFE" 
+          className="w-24 h-24 object-contain"
+        />
+      </div>
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        あなたのAI信仰度がわかる「No AI No Life診断」
+      </h1>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-2">
+        AIとどう向き合うかで、あなたの価値観が見えてくる。
+        6つの質問に答えて、あなたのAI信仰度とタイプを診断。
+      </p>
+      <p className="text-base text-gray-500 max-w-2xl mx-auto mb-2">
+        診断結果では、あなたに合ったヒントやおすすめ（※PR含む）も紹介します。
+        気づかなかった「自分らしさ」や「AIとの距離感」がわかるかも。
+      </p>
+      <p className="text-sm text-gray-400 max-w-2xl mx-auto">
+        診断結果はSNSでシェア！
+        #NoAINoLife診断 #AIタイプ診断 #生成AI
+      </p>
+    </div>
+  );
+
   if (!userInfo) {
-    return <UserInfoForm onSubmit={handleUserInfoSubmit} />;
+    return (
+      <div className="container mx-auto px-4 py-8">
+        {renderHeader()}
+        <UserInfoForm onSubmit={handleUserInfoSubmit} />
+      </div>
+    );
   }
 
   if (isComplete) {
     const result = getResultByType(typeCounts);
-    return <Results result={result} totalScore={0} onRestart={handleRestart} />;
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <Results result={result} totalScore={0} onRestart={handleRestart} />
+      </div>
+    );
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 py-8">
-      <ProgressBar 
-        currentStep={currentQuestionIndex + 1} 
-        totalSteps={questions.length} 
-      />
-      <div className="mt-8">
-        <Question
-          question={questions[currentQuestionIndex]}
-          selectedOption={selectedOptions[currentQuestionIndex] || null}
-          onSelectOption={handleOptionSelect}
+    <div className="container mx-auto px-4 py-8">
+      <div className="w-full max-w-2xl mx-auto">
+        <ProgressBar 
+          currentStep={currentQuestionIndex + 1} 
+          totalSteps={questions.length} 
         />
+        <div className="mt-8">
+          <Question
+            question={questions[currentQuestionIndex]}
+            selectedOption={selectedOptions[currentQuestionIndex] || null}
+            onSelectOption={handleOptionSelect}
+          />
+        </div>
       </div>
     </div>
   );
