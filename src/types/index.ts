@@ -14,6 +14,8 @@ export interface Result {
   type: string;
   title: string;
   description: string;
+  aiRelationship: string;
+  cautionPoint: string;
   recommendations: Recommendation[];
 }
 

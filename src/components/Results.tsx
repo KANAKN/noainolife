@@ -21,12 +21,35 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         <div className="inline-flex items-center justify-center mb-4 p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
           <Sparkles className="w-8 h-8 text-white" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-          {result.title}
-        </h2>
-        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-          {result.description}
-        </p>
+      </div>
+
+      <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+        <div className="space-y-6">
+          <div>
+            <h2 className="text-lg font-semibold text-gray-600 mb-2">タイプ</h2>
+            <p className="text-2xl font-bold text-gray-800">{result.type}</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-gray-600 mb-2">キャッチコピー</h2>
+            <p className="text-2xl font-bold text-gray-800">{result.title}</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-gray-600 mb-2">特徴と性格傾向</h2>
+            <p className="text-lg text-gray-700">{result.description}</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-gray-600 mb-2">AIとの関係性</h2>
+            <p className="text-lg text-gray-700">{result.aiRelationship}</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-gray-600 mb-2">注意点</h2>
+            <p className="text-lg text-gray-700">{result.cautionPoint}</p>
+          </div>
+        </div>
       </div>
 
       <div className="mt-8 mb-6">
