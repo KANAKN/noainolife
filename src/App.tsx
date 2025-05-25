@@ -10,7 +10,7 @@ function App() {
             <img 
               src="/no-ai-no-life-logo.png" 
               alt="NO AI, NO LIFE" 
-              className="w-24 h-24"
+              className="w-24 h-24 object-contain"
             />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
