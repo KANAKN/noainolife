@@ -39,7 +39,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           className="inline-flex items-center justify-center mb-4 p-3 rounded-full"
           style={{ backgroundColor: typeColor }}
         >
-          <Sparkles className="w-8 h-8 text-white" />
         </div>
       </div>
 
