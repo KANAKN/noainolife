@@ -98,9 +98,11 @@ const Quiz: React.FC = () => {
   const renderHeader = () => (
     <div className="w-[90%] md:w-[60%] mx-auto mb-12">
       <div className="flex justify-end mb-4">
-        <div className="w-24 h-24 bg-white/10 rounded-lg flex items-center justify-center">
-          <span className="text-white font-bold text-xl">NO AI, NO LIFE</span>
-        </div>
+        <img 
+          src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/no-ai-no-life-logo.png" 
+          alt="NO AI, NO LIFE" 
+          className="w-24 h-24 object-contain"
+        />
       </div>
       <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
