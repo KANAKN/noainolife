@@ -112,7 +112,7 @@ const Quiz: React.FC = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
           AIは､あなたの友か､敵か､神か？
         </h1>
-        <div className="text-left max-w-2xl mx-auto">
+        <div className="w-full max-w-md mx-auto text-left">
           <p className="text-lg text-white mb-2">
             AIとどう向き合うかで、あなたの価値観が見えてくる。<br />
             6つの質問に答えて、あなたのAI信仰度とタイプを診断。
