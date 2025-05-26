@@ -32,14 +32,6 @@ export const results: Result[] = [
     cautionPoint: "情報の取捨選択が曖昧になり、フェイクにも影響されやすいことも。",
     recommendations: [
       {
-        subtitle: "期間限定！運命のアイテムをお得にゲットできるか！？",
-        items: [
-          {
-            html: '<a href="https://hb.afl.rakuten.co.jp/hsc/487c6b0d.52428a44.487b6e56.3338ca58/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiI0NCIsImJhbiI6Mjc5NDg4OSwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hsb/487c6b0d.52428a44.487b6e56.3338ca58/?me_id=1&me_adv_id=2794889&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
-          }
-        ]
-      },
-      {
         subtitle: "もし傷つくことがあったら、まず寝る",
         items: [
           {
@@ -53,6 +45,14 @@ export const results: Result[] = [
           }
         ]
       }
+      {
+        subtitle: "期間限定！運命のアイテムをお得にゲットできるか！？",
+        items: [
+          {
+            html: '<a href="https://hb.afl.rakuten.co.jp/hsc/487c6b0d.52428a44.487b6e56.3338ca58/?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiI0NCIsImJhbiI6Mjc5NDg4OSwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hsb/487c6b0d.52428a44.487b6e56.3338ca58/?me_id=1&me_adv_id=2794889&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+          }
+        ]
+      },
     ]
   },
   {
