@@ -50,12 +50,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         
         <div className="p-8 space-y-4">
           <div className="border-b border-gray-100 pb-4">
-            <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
-              style={{ color: typeColor }}
-            >
-              キャッチコピー
-            </h3>
             <p className="text-2xl font-bold text-gray-800">
               {result.title}
             </p>
