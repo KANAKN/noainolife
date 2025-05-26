@@ -12,16 +12,14 @@ const Quiz: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
-    'リアリスト型': 2,
-    'ロマンチスト型': 1,
-    'シンクロニスト型': 1,
-    'エスケーパー型': 2
+    'リアリスト型': 0,
+    'ロマンチスト型': 0,
+    'シンクロニスト型': 0,
+    'エスケーパー型': 0
   });
-  const [isComplete, setIsComplete] = useState(true);
-  const [userInfo, setUserInfo] = useState<UserInfo | null>({
-    ageGroup: '25-29歳',
-    gender: '女性'
-  });
+  const [isComplete, setIsComplete] = useState(false);
+  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+  const [showResults, setShowResults] = useState(false);
 
   const handleUserInfoSubmit = (info: UserInfo) => {
     setUserInfo(info);
@@ -82,6 +80,7 @@ const Quiz: React.FC = () => {
         await saveQuizResponse(quizResponse);
       }
       setIsComplete(true);
+      setShowResults(true);
     }
   };
 
@@ -95,7 +94,17 @@ const Quiz: React.FC = () => {
       'エスケーパー型': 0
     });
     setIsComplete(false);
+    setShowResults(false);
     setUserInfo(null);
+  };
+
+  const handleShowResults = () => {
+    setShowResults(true);
+  };
+
+  const handleStartQuiz = () => {
+    setShowResults(false);
+    handleRestart();
   };
 
   const renderHeader = () => (
@@ -121,27 +130,43 @@ const Quiz: React.FC = () => {
             診断結果はSNSでシェア！<br />
             #NoAINoLife診断 #AIタイプ診断 #生成AI
           </p>
-          <p className="text-sm text-white/80">
-          </p>
+          <div className="flex justify-center mt-6">
+            {!isComplete && (
+              <button
+                onClick={handleShowResults}
+                className="text-white hover:text-yellow-300 transition-colors"
+              >
+                ▶ 診断結果を見る
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
   );
+
+  if (showResults) {
+    const result = getResultByType(typeCounts);
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <Results result={result} totalScore={0} onRestart={handleStartQuiz} />
+        <div className="mt-8 text-center">
+          <button
+            onClick={handleStartQuiz}
+            className="text-white hover:text-yellow-300 transition-colors"
+          >
+            ▶ 診断トップに戻る
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   if (!userInfo) {
     return (
       <div className="container mx-auto px-4 py-8">
         {renderHeader()}
         <UserInfoForm onSubmit={handleUserInfoSubmit} />
-      </div>
-    );
-  }
-
-  if (isComplete) {
-    const result = getResultByType(typeCounts);
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <Results result={result} totalScore={0} onRestart={handleRestart} />
       </div>
     );
   }
