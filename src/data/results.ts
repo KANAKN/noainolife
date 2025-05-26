@@ -83,7 +83,8 @@ export const results: Result[] = [
         imageUrl: "https://images.pexels.com/photos/5240547/pexels-photo-5240547.jpeg",
         affiliateLink: "https://example.com/tech-academy"
       }
-    }
+    ]
+  }
 ];
 
 export const getResultByType = (typeCounts: { [key: string]: number }): Result => {
