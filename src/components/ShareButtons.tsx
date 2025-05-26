@@ -7,22 +7,50 @@ interface ShareButtonsProps {
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = window.location.href;
-  const shareText = `パーソナリティ診断で「${resultType}」タイプとわかりました！あなたも診断してみませんか？`;
+  const shareText = `AIタイプ診断で「${resultType}」タイプとわかりました！\n\nあなたもAIとの相性を診断してみませんか？\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
+  
+  const getShareImage = (type: string) => {
+    switch (type) {
+      case 'リアリスト型':
+        return '/share-realist.png';
+      case 'ロマンチスト型':
+        return '/share-romantic.png';
+      case 'シンクロニスト型':
+        return '/share-syncronist.png';
+      case 'エスケーパー型':
+        return '/share-escaper.png';
+      default:
+        return '/share-default.png';
+    }
+  };
+
+  const shareImage = getShareImage(resultType);
   
   const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
+    const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+    window.open(fbShareUrl, '_blank', 'width=600,height=400');
   };
   
   const shareToX = () => {
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
+    const xShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    window.open(xShareUrl, '_blank', 'width=600,height=400');
   };
   
   const shareToInstagram = () => {
+    // Instagramはウェブからの直接共有APIがないため、
+    // 画像をダウンロードしてもらう方式に変更
+    const a = document.createElement('a');
+    a.href = shareImage;
+    a.download = `noainolife-${resultType}.png`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
     window.open('https://www.instagram.com', '_blank');
   };
   
   const shareToLine = () => {
-    window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`, '_blank');
+    const lineShareUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+    window.open(lineShareUrl, '_blank', 'width=600,height=400');
   };
 
   return (
@@ -31,6 +59,13 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
         <Share2 className="w-5 h-5 mr-2" />
         結果をシェアする
       </h3>
+      <div className="mb-4">
+        <img 
+          src={shareImage} 
+          alt={`${resultType}の診断結果`} 
+          className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+        />
+      </div>
       <div className="flex flex-col md:flex-row gap-3">
         <button 
           onClick={shareToFacebook}
