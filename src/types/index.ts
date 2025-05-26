@@ -15,7 +15,6 @@ export interface Result {
   title: string;
   description: string;
   aiRelationship: string;
-  cautionPoint: string;
   recommendations: RecommendationCategory[];
 }
 
