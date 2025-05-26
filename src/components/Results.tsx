@@ -112,9 +112,11 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             <h4 className="text-lg font-medium text-gray-700 mb-4">
               {category.subtitle}
             </h4>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {category.items.map((item, itemIndex) => (
-                <RecommendationCard key={itemIndex} recommendation={item} />
+                <div key={itemIndex} className="w-full">
+                  <RecommendationCard recommendation={item} />
+                </div>
               ))}
             </div>
           </div>
