@@ -9,16 +9,20 @@ import UserInfoForm from './UserInfoForm';
 import { supabase } from '../lib/supabase';
 
 const Quiz: React.FC = () => {
+  // テスト用の初期値を設定
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
-    'リアリスト型': 0,
-    'ロマンチスト型': 0,
-    'シンクロニスト型': 0,
-    'エスケーパー型': 0
+    'リアリスト型': 2,
+    'ロマンチスト型': 1,
+    'シンクロニスト型': 1,
+    'エスケーパー型': 2
   });
-  const [isComplete, setIsComplete] = useState(false);
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+  const [isComplete, setIsComplete] = useState(true); // テスト用にtrueに設定
+  const [userInfo, setUserInfo] = useState<UserInfo | null>({
+    ageGroup: '25-29歳',
+    gender: '回答しない'
+  }); // テスト用のダミーデータ
 
   const handleUserInfoSubmit = (info: UserInfo) => {
     setUserInfo(info);
