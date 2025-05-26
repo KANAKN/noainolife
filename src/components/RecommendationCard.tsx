@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Recommendation } from '../types';
 
 interface RecommendationCardProps {
@@ -6,11 +6,42 @@ interface RecommendationCardProps {
 }
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation }) => {
+  const widgetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (recommendation.rakutenWidget && widgetRef.current) {
+      // Clear previous content
+      widgetRef.current.innerHTML = '';
+      
+      // Create and append scripts
+      const container = document.createElement('div');
+      container.innerHTML = recommendation.rakutenWidget;
+      
+      const scripts = container.getElementsByTagName('script');
+      Array.from(scripts).forEach(script => {
+        const newScript = document.createElement('script');
+        
+        // Copy attributes
+        Array.from(script.attributes).forEach(attr => {
+          newScript.setAttribute(attr.name, attr.value);
+        });
+        
+        // Copy content
+        newScript.textContent = script.textContent;
+        
+        // Replace old script with new one
+        if (widgetRef.current) {
+          widgetRef.current.appendChild(newScript);
+        }
+      });
+    }
+  }, [recommendation.rakutenWidget]);
+
   if (recommendation.rakutenWidget) {
     return (
       <div 
+        ref={widgetRef}
         className="bg-white rounded-lg overflow-hidden border border-gray-200 p-4"
-        dangerouslySetInnerHTML={{ __html: recommendation.rakutenWidget }}
       />
     );
   }
