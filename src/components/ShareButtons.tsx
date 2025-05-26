@@ -26,14 +26,35 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
 
   const shareImage = getShareImage(resultType);
   
+  const openShareWindow = (url: string, title: string) => {
+    const width = 600;
+    const height = 400;
+    const left = window.innerWidth / 2 - width / 2;
+    const top = window.innerHeight / 2 - height / 2;
+    
+    const features = [
+      `width=${width}`,
+      `height=${height}`,
+      `left=${left}`,
+      `top=${top}`,
+      'status=no',
+      'resizable=yes',
+      'toolbar=no',
+      'menubar=no',
+      'scrollbars=yes'
+    ].join(',');
+
+    window.open(url, title, features);
+  };
+  
   const shareToFacebook = () => {
-    const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
-    window.open(fbShareUrl, '_blank', 'width=600,height=400');
+    const fbShareUrl = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+    openShareWindow(fbShareUrl, 'Share on Facebook');
   };
   
   const shareToX = () => {
     const xShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
-    window.open(xShareUrl, '_blank', 'width=600,height=400');
+    openShareWindow(xShareUrl, 'Share on X');
   };
   
   const shareToInstagram = () => {
@@ -50,7 +71,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   
   const shareToLine = () => {
     const lineShareUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
-    window.open(lineShareUrl, '_blank', 'width=600,height=400');
+    openShareWindow(lineShareUrl, 'Share on LINE');
   };
 
   return (
