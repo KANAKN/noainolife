@@ -43,7 +43,7 @@ export const results: Result[] = [
     cautionPoint: "情報過多になりがちで、まとまりを失うことも。",
     recommendations: [
       {
-        title: "【先着2000円OFFクーポン　お買い物マラソン】ノートン norton ノートン 360 スタンダード 1台 3年版 ダウンロード アンチウイルス iOS windows mac norton セキュリティソフト 送料無料 ノートン360 セキュリティ スマホ iphone ipad パソコン",
+        title: "",
         description: "最新AI技術で進化し続けるセキュリティ。新しい発見と創造的な活動を安全に楽しめる環境を提供。",
         imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
         affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
