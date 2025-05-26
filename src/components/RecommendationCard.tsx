@@ -10,39 +10,25 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
 
   useEffect(() => {
     if (recommendation.rakutenWidget && widgetRef.current) {
-      // 既存のウィジェットをクリア
-      while (widgetRef.current.firstChild) {
-        widgetRef.current.removeChild(widgetRef.current.firstChild);
-      }
+      // Create a container for the widget
+      const container = document.createElement('div');
+      container.innerHTML = recommendation.rakutenWidget;
 
-      // HTMLをパース
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(recommendation.rakutenWidget, 'text/html');
-      const scripts = doc.getElementsByTagName('script');
+      // Clear existing content
+      widgetRef.current.innerHTML = '';
+      
+      // Add the widget container
+      widgetRef.current.appendChild(container);
 
-      // スクリプトを順番に実行
-      Array.from(scripts).forEach(script => {
+      // Execute scripts
+      const scripts = container.getElementsByTagName('script');
+      Array.from(scripts).forEach(oldScript => {
         const newScript = document.createElement('script');
-        
-        // 属性をコピー
-        Array.from(script.attributes).forEach(attr => {
+        Array.from(oldScript.attributes).forEach(attr => {
           newScript.setAttribute(attr.name, attr.value);
         });
-        
-        // インラインスクリプトの場合
-        if (script.textContent) {
-          newScript.textContent = script.textContent;
-        }
-        
-        // 外部スクリプトの場合
-        if (script.src) {
-          newScript.src = script.src;
-        }
-
-        // DOMに追加
-        if (widgetRef.current) {
-          widgetRef.current.appendChild(newScript);
-        }
+        newScript.text = oldScript.text;
+        oldScript.parentNode?.replaceChild(newScript, oldScript);
       });
     }
   }, [recommendation.rakutenWidget]);
