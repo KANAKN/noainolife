@@ -44,7 +44,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           style={{ backgroundColor: typeColor }}
         >
           <h2 className="text-3xl font-bold text-white text-center">
-            {result.type}
+            あなたは {result.type}
           </h2>
         </div>
         
