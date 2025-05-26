@@ -8,7 +8,7 @@ interface ShareButtonsProps {
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const [copied, setCopied] = useState(false);
   const shareUrl = window.location.href;
-  const shareText = `私はAI信仰度診断で「${resultType}」タイプでした！\n\nあなたは何タイプ？ 今すぐ診断してみよう！\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
+  const shareText = `私はAI信仰度診断で「${resultType}」でした！\n\nあなたは何タイプ？ 今すぐ診断してみよう！\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
   
   const openShareWindow = (url: string, title: string, width: number, height: number) => {
     const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
