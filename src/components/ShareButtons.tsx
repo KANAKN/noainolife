@@ -1,11 +1,12 @@
-import React from 'react';
-import { Share2, Facebook, Instagram } from 'lucide-react';
+import React, { useState } from 'react';
+import { Share2, Facebook, Copy, Check } from 'lucide-react';
 
 interface ShareButtonsProps {
   resultType: string;
 }
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
+  const [copied, setCopied] = useState(false);
   const shareUrl = window.location.href;
   const shareText = `私はAI信仰度診断で「${resultType}」タイプでした！\n\nあなたは何タイプ？ 今すぐ診断してみよう！\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
   
@@ -49,17 +50,43 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     
     openShareWindow(url.toString(), 'X', 550, 420);
   };
-  
-  const shareToInstagram = () => {
-    window.open('https://www.instagram.com', '_blank');
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
   };
   
   const shareToLine = () => {
+    const lineImageUrl = getLineShareImage(resultType);
     const url = new URL('https://social-plugins.line.me/lineit/share');
     url.searchParams.set('url', shareUrl);
     url.searchParams.set('text', shareText);
     
+    if (lineImageUrl) {
+      url.searchParams.set('image', lineImageUrl);
+    }
+    
     openShareWindow(url.toString(), 'LINE', 500, 500);
+  };
+
+  const getLineShareImage = (type: string) => {
+    switch (type) {
+      case 'リアリスト型':
+        return 'https://raw.githubusercontent.com/stackblitz/bolt/main/assets/share-realist.png';
+      case 'ロマンチスト型':
+        return 'https://raw.githubusercontent.com/stackblitz/bolt/main/assets/share-romantic.png';
+      case 'シンクロニスト型':
+        return 'https://raw.githubusercontent.com/stackblitz/bolt/main/assets/share-syncronist.png';
+      case 'エスケーパー型':
+        return 'https://raw.githubusercontent.com/stackblitz/bolt/main/assets/share-escaper.png';
+      default:
+        return 'https://raw.githubusercontent.com/stackblitz/bolt/main/assets/share-default.png';
+    }
   };
 
   return (
@@ -83,17 +110,26 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           <span>X</span>
         </button>
         <button 
-          onClick={shareToInstagram}
-          className="py-3 md:py-2 px-4 bg-[#E4405F] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
-        >
-          <Instagram className="w-5 h-5" />
-          <span>Instagram</span>
-        </button>
-        <button 
           onClick={shareToLine}
           className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
         >
           <span>LINE</span>
+        </button>
+        <button 
+          onClick={copyToClipboard}
+          className="py-3 md:py-2 px-4 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+        >
+          {copied ? (
+            <>
+              <Check className="w-5 h-5" />
+              <span>コピーしました</span>
+            </>
+          ) : (
+            <>
+              <Copy className="w-5 h-5" />
+              <span>リンクをコピー</span>
+            </>
+          )}
         </button>
       </div>
     </div>
