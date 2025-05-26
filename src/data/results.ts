@@ -10,7 +10,7 @@ export const results: Result[] = [
     recommendations: [
       {
         title: "",
-        description: "",
+        description: "AIを活用した高度なセキュリティ保護",
         imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
         affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
         price: "11,980円（税込、送料無料)",
