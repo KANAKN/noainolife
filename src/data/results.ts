@@ -9,12 +9,18 @@ export const results: Result[] = [
     cautionPoint: "柔軟性に欠けたり、人との関係で冷たく見られることも。",
     recommendations: [
       {
-        subtitle: "効率重視なあなたには、安全で確実なセキュリティツールがおすすめ！",
+        subtitle: "効率重視なあなたには、睡眠の質を高めるアイテムがおすすめ！",
         items: [
           {
             html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
           }
         ]
+        items: [
+          {
+            html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+          }
+        ]
+
       }
     ]
   },
