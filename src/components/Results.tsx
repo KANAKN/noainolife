@@ -47,7 +47,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         <div className="p-8 space-y-4">
           <div className="border-b border-gray-100 pb-4">
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
               キャッチコピー
@@ -59,7 +59,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
           <div className="border-b border-gray-100 pb-4">
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
               特徴と性格傾向
@@ -71,7 +71,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
           <div className="border-b border-gray-100 pb-4">
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
               AIとの関係性
@@ -83,7 +83,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
           <div>
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
               注意点
@@ -112,14 +112,14 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           あなたにおすすめのアイテム
         </h3>
         {result.recommendations.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-2 last:mb-0">
-            <h4 className="text-lg font-medium text-gray-700 mb-1 text-center">
+          <div key={categoryIndex} className="mb-6 last:mb-0">
+            <h4 className="text-lg font-medium text-gray-700 mb-4 text-center">
               {category.subtitle}
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+            <div className="flex flex-wrap justify-center gap-4">
               {category.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="h-full flex justify-center">
-                  <div className="w-full h-full bg-white rounded-lg shadow-sm p-2 flex items-center justify-center">
+                <div key={itemIndex} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] flex justify-center">
+                  <div className="w-full bg-white rounded-lg shadow-sm p-4">
                     <RecommendationCard recommendation={item} />
                   </div>
                 </div>
