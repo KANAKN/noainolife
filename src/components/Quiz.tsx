@@ -108,7 +108,7 @@ const Quiz: React.FC = () => {
           className="w-24 h-24 object-contain"
         />
       </div>
-      <div className="text-left">
+      <div className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
           AIは､あなたの友か､敵か､神か？
         </h1>
