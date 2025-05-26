@@ -7,27 +7,43 @@ interface RecommendationCardProps {
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation }) => {
   return (
-    <div className="flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div className="w-full h-48 overflow-hidden">
-        <img 
-          src={recommendation.imageUrl} 
-          alt={recommendation.title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <div className="p-4 flex-grow">
-        <h3 className="text-lg font-medium text-gray-800 mb-2">{recommendation.title}</h3>
-        <p className="text-gray-600 mb-4">{recommendation.description}</p>
-      </div>
-      <div className="px-4 pb-4">
-        <a 
-          href={recommendation.affiliateLink} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="block w-full py-2 bg-[#9d1939] text-white text-center rounded-lg hover:opacity-95 transition-opacity"
-        >
-          Learn More
-        </a>
+    <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
+      <div className="p-4">
+        <div className="flex">
+          <div className="w-32 h-32 flex-shrink-0">
+            <a 
+              href={recommendation.affiliateLink} 
+              target="_blank" 
+              rel="nofollow sponsored noopener"
+              className="block w-full h-full"
+            >
+              <img 
+                src={recommendation.imageUrl} 
+                alt={recommendation.title}
+                className="w-full h-full object-contain"
+              />
+            </a>
+          </div>
+          <div className="ml-4 flex-grow">
+            <a 
+              href={recommendation.affiliateLink}
+              target="_blank" 
+              rel="nofollow sponsored noopener"
+              className="block text-sm leading-snug text-gray-800 hover:text-gray-600 mb-2"
+            >
+              {recommendation.title}
+            </a>
+            <p className="text-sm text-gray-600">{recommendation.description}</p>
+            {recommendation.price && (
+              <p className="mt-2">
+                <span className="text-base">価格：{recommendation.price}</span>
+                {recommendation.priceDate && (
+                  <span className="text-gray-400 text-sm ml-2">({recommendation.priceDate}時点)</span>
+                )}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

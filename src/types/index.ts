@@ -24,6 +24,8 @@ export interface Recommendation {
   description: string;
   imageUrl: string;
   affiliateLink: string;
+  price?: string;
+  priceDate?: string;
 }
 
 export interface TypeCount {
