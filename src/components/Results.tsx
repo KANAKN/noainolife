@@ -103,6 +103,8 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         </div>
       </div>
 
+      <ShareButtons resultType={result.type} />
+
       <div className="bg-gray-50 rounded-xl p-4 mb-4">
         <h3 className="text-xl font-bold text-gray-800 mb-2">
           あなたにおすすめのアイテム
@@ -124,8 +126,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           </div>
         ))}
       </div>
-
-      <ShareButtons resultType={result.type} />
 
       <div className="mt-10 text-center">
         <button
