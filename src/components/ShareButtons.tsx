@@ -7,7 +7,7 @@ interface ShareButtonsProps {
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = window.location.href;
-  const shareText = `AIタイプ診断で「${resultType}」タイプとわかりました！\n\nあなたもAIとの相性を診断してみませんか？\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
+  const shareText = `私はAI信仰度診断で「${resultType}」タイプでした。\n\nあなたは何タイプ？　診断はこちらから　\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
   
   const getShareImage = (type: string) => {
     switch (type) {
