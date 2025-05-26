@@ -32,7 +32,6 @@ export const results: Result[] = [
     cautionPoint: "情報の取捨選択が曖昧になり、フェイクにも影響されやすいことも。",
     recommendations: [
       {
-      {
         subtitle: "期間限定！あなたは運命のアイテムをお得にゲットできるか！？",
         items: [
           {
