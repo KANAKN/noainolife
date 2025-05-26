@@ -12,13 +12,7 @@ export const results: Result[] = [
         subtitle: "効率重視なあなたには、安全で確実なセキュリティツールがおすすめ！",
         items: [
           {
-            title: "【先着2000円OFFクーポン　お買い物マラソン】ノートン norton ノートン 360 スタンダード 1台 3年版",
             html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>',
-            description: "AIを活用した高度なセキュリティ保護。1台3年版でマルチデバイスに対応。",
-            imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
-            affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
-            price: "11,980円（税込、送料無料)",
-            priceDate: "2025/5/26"
           }
         ]
       }
