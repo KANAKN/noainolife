@@ -52,7 +52,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             >
               キャッチコピー
             </h3>
-            <p className="text-2xl font-bold text-gray-800 text-center">
+            <p className="text-2xl font-bold text-gray-800">
               {result.title}
             </p>
           </div>
@@ -64,7 +64,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             >
               特徴と性格傾向
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="text-lg text-gray-700 leading-relaxed">
               {result.description}
             </p>
           </div>
@@ -76,7 +76,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             >
               AIとの関係性
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="text-lg text-gray-700 leading-relaxed">
               {result.aiRelationship}
             </p>
           </div>
@@ -89,7 +89,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
               注意点
             </h3>
             <div 
-              className="border-l-4 p-4 rounded text-center"
+              className="border-l-4 p-4 rounded"
               style={{ 
                 backgroundColor: `${typeColor}15`,
                 borderColor: typeColor
