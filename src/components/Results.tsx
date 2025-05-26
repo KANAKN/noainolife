@@ -108,14 +108,16 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           あなたにおすすめのアイテム
         </h3>
         {result.recommendations.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-8 last:mb-0">
-            <h4 className="text-lg font-medium text-gray-700 mb-4">
+          <div key={categoryIndex} className="mb-12 last:mb-0">
+            <h4 className="text-lg font-medium text-gray-700 mb-6">
               {category.subtitle}
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {category.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="w-full">
-                  <RecommendationCard recommendation={item} />
+                <div key={itemIndex} className="flex items-stretch">
+                  <div className="w-full bg-white rounded-lg shadow-sm p-4 flex items-center justify-center">
+                    <RecommendationCard recommendation={item} />
+                  </div>
                 </div>
               ))}
             </div>
