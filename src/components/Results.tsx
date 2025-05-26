@@ -67,24 +67,12 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             </p>
           </div>
 
-          <div className="border-b border-gray-100 pb-4">
-            <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
-              style={{ color: typeColor }}
-            >
-              AIとの関係性
-            </h3>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {result.aiRelationship}
-            </p>
-          </div>
-
           <div>
             <h3 
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
-              注意点
+              AIとの関係性
             </h3>
             <div 
               className="border-l-4 p-4 rounded"
@@ -94,7 +82,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
               }}
             >
               <p className="text-lg text-gray-700 leading-relaxed">
-                {result.cautionPoint}
+                {result.aiRelationship}
               </p>
             </div>
           </div>
