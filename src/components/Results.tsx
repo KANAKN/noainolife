@@ -116,9 +116,11 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         </p>
         {result.recommendations.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-4 last:mb-0">
-            <h4 className="text-lg font-medium text-gray-700 mb-4 text-center">
-              {category.subtitle}
-            </h4>
+            {category.subtitle && (
+              <h4 className="text-lg font-medium text-gray-700 mb-4 text-center">
+                {category.subtitle}
+              </h4>
+            )}
             <div className="flex flex-wrap justify-center gap-4">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] flex justify-center">
