@@ -9,16 +9,16 @@ export const results: Result[] = [
     cautionPoint: "柔軟性に欠けたり、人との関係で冷たく見られることも。",
     recommendations: [
       {
+        title: "Norton 360 スタンダード",
+        description: "AIを活用した高度なセキュリティ保護。1台3年版でマルチデバイスに対応。効率的なセキュリティ管理を実現。",
+        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F"
+      },
+      {
         title: "業務効率化AIツール特集",
         description: "AI自動化ツール導入で作業時間を短縮しよう。最新のAI活用ツールで業務効率を劇的に改善。",
         imageUrl: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
         affiliateLink: "https://example.com/ai-productivity"
-      },
-      {
-        title: "Udemyビジネス入門",
-        description: "無料で始めるビジネススキル講座。AI時代に必要なスキルを効率的に習得。",
-        imageUrl: "https://images.pexels.com/photos/7063776/pexels-photo-7063776.jpeg",
-        affiliateLink: "https://example.com/udemy-business"
       }
     ]
   },
@@ -30,16 +30,16 @@ export const results: Result[] = [
     cautionPoint: "情報の取捨選択が曖昧になり、フェイクにも影響されやすいことも。",
     recommendations: [
       {
+        title: "Norton 360 スタンダード",
+        description: "AIが24時間365日見守る安心のセキュリティ。大切な思い出と個人情報を守り、安全なオンライン体験を。",
+        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F"
+      },
+      {
         title: "恋AIナビ",
         description: "相性診断や恋愛占いAIアプリで、あなたの運命の相手を見つけましょう。",
         imageUrl: "https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg",
         affiliateLink: "https://example.com/ai-love-fortune"
-      },
-      {
-        title: "香水定期便COLORIA",
-        description: "AIが選ぶ「あなたにぴったりな香水」をお届け。毎月の香りで新しい自分を発見。",
-        imageUrl: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
-        affiliateLink: "https://example.com/coloria-perfume"
       }
     ]
   },
@@ -51,16 +51,16 @@ export const results: Result[] = [
     cautionPoint: "情報過多になりがちで、まとまりを失うことも。",
     recommendations: [
       {
+        title: "Norton 360 スタンダード",
+        description: "最新AI技術で進化し続けるセキュリティ。新しい発見と創造的な活動を安全に楽しめる環境を提供。",
+        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F"
+      },
+      {
         title: "Notion AI",
         description: "アイデアを形にするAIサービス。思考を整理し、創造性を最大限に引き出します。",
         imageUrl: "https://images.pexels.com/photos/7567444/pexels-photo-7567444.jpeg",
         affiliateLink: "https://example.com/notion-ai"
-      },
-      {
-        title: "Canva Pro",
-        description: "デザイン×AIで自己表現。あなたのクリエイティビティを解放します。",
-        imageUrl: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
-        affiliateLink: "https://example.com/canva-pro"
       }
     ]
   },
@@ -72,16 +72,16 @@ export const results: Result[] = [
     cautionPoint: "情報に背を向けすぎて、損をしてしまうことも。",
     recommendations: [
       {
+        title: "Norton 360 スタンダード",
+        description: "プライバシーを重視した安全設計。必要最小限のAI活用で、静かに、でもしっかりとデバイスを保護。",
+        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F"
+      },
+      {
         title: "副業スタートブック",
         description: "個人で稼ぐスキルを身につける。AI時代に左右されない、自分らしい働き方を見つけましょう。",
         imageUrl: "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg",
         affiliateLink: "https://example.com/side-business-guide"
-      },
-      {
-        title: "TechAcademy はじめての副業コース",
-        description: "Web知識ゼロから学べる。自分のペースでスキルアップを目指せます。",
-        imageUrl: "https://images.pexels.com/photos/5240547/pexels-photo-5240547.jpeg",
-        affiliateLink: "https://example.com/tech-academy"
       }
     ]
   }
