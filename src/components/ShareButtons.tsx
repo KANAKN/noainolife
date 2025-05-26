@@ -9,75 +9,57 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = window.location.href;
   const shareText = `私はAI信仰度診断で「${resultType}」タイプでした。\n\nあなたは何タイプ？　診断はこちらから　\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
   
-  const getShareImage = (type: string) => {
-    switch (type) {
-      case 'リアリスト型':
-        return '/share-realist.png';
-      case 'ロマンチスト型':
-        return '/share-romantic.png';
-      case 'シンクロニスト型':
-        return '/share-syncronist.png';
-      case 'エスケーパー型':
-        return '/share-escaper.png';
-      default:
-        return '/share-default.png';
-    }
-  };
-
-  const shareImage = getShareImage(resultType);
-  
   const shareToFacebook = () => {
-    const fbShareUrl = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    const fbShareUrl = new URL('https://www.facebook.com/sharer/sharer.php');
+    fbShareUrl.searchParams.append('u', shareUrl);
     
     const width = 626;
     const height = 436;
-    const left = (window.innerWidth - width) / 2;
-    const top = (window.innerHeight - height) / 2;
+    const left = Math.floor((window.innerWidth - width) / 2);
+    const top = Math.floor((window.innerHeight - height) / 2);
 
     window.open(
-      fbShareUrl,
+      fbShareUrl.toString(),
       'facebook-share-dialog',
-      `width=${width},height=${height},left=${left},top=${top},toolbar=0,status=0,menubar=0,scrollbars=0`
+      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,location=no,status=no`
     );
   };
   
   const shareToX = () => {
-    const xShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    const xShareUrl = new URL('https://twitter.com/intent/tweet');
+    xShareUrl.searchParams.append('text', shareText);
+    xShareUrl.searchParams.append('url', shareUrl);
+
     const width = 550;
     const height = 420;
-    const left = (window.innerWidth - width) / 2;
-    const top = (window.innerHeight - height) / 2;
+    const left = Math.floor((window.innerWidth - width) / 2);
+    const top = Math.floor((window.innerHeight - height) / 2);
 
     window.open(
-      xShareUrl,
+      xShareUrl.toString(),
       'twitter-share-dialog',
-      `width=${width},height=${height},left=${left},top=${top},toolbar=0,status=0`
+      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,location=no,status=no`
     );
   };
   
   const shareToInstagram = () => {
-    // Instagramはウェブからの直接共有APIがないため、
-    // 画像をダウンロードしてもらう方式に変更
-    const a = document.createElement('a');
-    a.href = shareImage;
-    a.download = `noainolife-${resultType}.png`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
     window.open('https://www.instagram.com', '_blank');
   };
   
   const shareToLine = () => {
-    const lineShareUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+    const lineShareUrl = new URL('https://social-plugins.line.me/lineit/share');
+    lineShareUrl.searchParams.append('url', shareUrl);
+    lineShareUrl.searchParams.append('text', shareText);
+
     const width = 500;
     const height = 500;
-    const left = (window.innerWidth - width) / 2;
-    const top = (window.innerHeight - height) / 2;
+    const left = Math.floor((window.innerWidth - width) / 2);
+    const top = Math.floor((window.innerHeight - height) / 2);
 
     window.open(
-      lineShareUrl,
+      lineShareUrl.toString(),
       'line-share-dialog',
-      `width=${width},height=${height},left=${left},top=${top},toolbar=0,status=0`
+      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,location=no,status=no`
     );
   };
 
@@ -87,13 +69,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
         <Share2 className="w-5 h-5 mr-2" />
         結果をシェアする
       </h3>
-      <div className="mb-4">
-        <img 
-          src={shareImage} 
-          alt={`${resultType}の診断結果`} 
-          className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-        />
-      </div>
       <div className="flex flex-col md:flex-row gap-3">
         <button 
           onClick={shareToFacebook}
