@@ -112,17 +112,19 @@ const Quiz: React.FC = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
           AIは､あなたの友か､敵か､神か？
         </h1>
-        <p className="text-lg text-white max-w-2xl mx-auto mb-2">
-          AIとどう向き合うかで、あなたの価値観が見えてくる。<br />
-          6つの質問に答えて、あなたのAI信仰度とタイプを診断。
-        </p>
-        <p className="text-base text-white max-w-2xl mx-auto mb-2">
-          診断結果では、あなたに合ったヒントやおすすめ（※PR含む）も紹介します。<br />
-          診断結果はSNSでシェア！<br />
-          #NoAINoLife診断 #AIタイプ診断 #生成AI
-        </p>
-        <p className="text-sm text-white/80 max-w-2xl mx-auto">
-        </p>
+        <div className="text-left max-w-2xl mx-auto">
+          <p className="text-lg text-white mb-2">
+            AIとどう向き合うかで、あなたの価値観が見えてくる。<br />
+            6つの質問に答えて、あなたのAI信仰度とタイプを診断。
+          </p>
+          <p className="text-base text-white mb-2">
+            診断結果では、あなたに合ったヒントやおすすめ（※PR含む）も紹介します。<br />
+            診断結果はSNSでシェア！<br />
+            #NoAINoLife診断 #AIタイプ診断 #生成AI
+          </p>
+          <p className="text-sm text-white/80">
+          </p>
+        </div>
       </div>
     </div>
   );
