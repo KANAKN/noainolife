@@ -103,7 +103,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         </div>
       </div>
 
-      <div className="flex justify-center mb-8">
+      <div className="flex justify-center mb-4">
         <ShareButtons resultType={result.type} />
       </div>
 
