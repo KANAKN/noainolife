@@ -33,7 +33,14 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
             >
               {recommendation.title}
             </a>
-            <p className="text-sm text-gray-600">{recommendation.description}</p>
+            {recommendation.html ? (
+              <div 
+                className="text-sm text-gray-600"
+                dangerouslySetInnerHTML={{ __html: recommendation.html }}
+              />
+            ) : (
+              <p className="text-sm text-gray-600">{recommendation.description}</p>
+            )}
             {recommendation.price && (
               <p className="mt-2">
                 <span className="text-base font-medium">{recommendation.price}</span>
@@ -49,4 +56,4 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
   );
 };
 
-export default RecommendationCard
+export default RecommendationCard;
