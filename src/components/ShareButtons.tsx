@@ -9,37 +9,31 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = window.location.href;
   const shareText = `私はAI信仰度診断で「${resultType}」タイプでした。\n\nあなたは何タイプ？　診断はこちらから　\n\n#NoAINoLife診断 #AIタイプ診断 #生成AI`;
   
+  const openShareWindow = (url: string, title: string, width: number, height: number) => {
+    const left = Math.floor((window.innerWidth - width) / 2);
+    const top = Math.floor((window.innerHeight - height) / 2);
+    
+    return window.open(
+      url,
+      title,
+      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,location=no,status=no,scrollbars=yes`
+    );
+  };
+  
   const shareToFacebook = () => {
     const fbShareUrl = new URL('https://www.facebook.com/sharer/sharer.php');
     fbShareUrl.searchParams.append('u', shareUrl);
+    fbShareUrl.searchParams.append('quote', shareText);
     
-    const width = 626;
-    const height = 436;
-    const left = Math.floor((window.innerWidth - width) / 2);
-    const top = Math.floor((window.innerHeight - height) / 2);
-
-    window.open(
-      fbShareUrl.toString(),
-      'facebook-share-dialog',
-      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,location=no,status=no`
-    );
+    openShareWindow(fbShareUrl.toString(), 'facebook-share-dialog', 626, 436);
   };
   
   const shareToX = () => {
     const xShareUrl = new URL('https://twitter.com/intent/tweet');
     xShareUrl.searchParams.append('text', shareText);
     xShareUrl.searchParams.append('url', shareUrl);
-
-    const width = 550;
-    const height = 420;
-    const left = Math.floor((window.innerWidth - width) / 2);
-    const top = Math.floor((window.innerHeight - height) / 2);
-
-    window.open(
-      xShareUrl.toString(),
-      'twitter-share-dialog',
-      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,location=no,status=no`
-    );
+    
+    openShareWindow(xShareUrl.toString(), 'twitter-share-dialog', 550, 420);
   };
   
   const shareToInstagram = () => {
@@ -50,17 +44,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     const lineShareUrl = new URL('https://social-plugins.line.me/lineit/share');
     lineShareUrl.searchParams.append('url', shareUrl);
     lineShareUrl.searchParams.append('text', shareText);
-
-    const width = 500;
-    const height = 500;
-    const left = Math.floor((window.innerWidth - width) / 2);
-    const top = Math.floor((window.innerHeight - height) / 2);
-
-    window.open(
-      lineShareUrl.toString(),
-      'line-share-dialog',
-      `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,location=no,status=no`
-    );
+    
+    openShareWindow(lineShareUrl.toString(), 'line-share-dialog', 500, 500);
   };
 
   return (
