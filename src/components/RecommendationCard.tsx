@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Recommendation } from '../types';
 
 interface RecommendationCardProps {
@@ -6,62 +6,6 @@ interface RecommendationCardProps {
 }
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation }) => {
-  const widgetRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (recommendation.rakutenWidget && widgetRef.current) {
-      // 既存のウィジェットをクリア
-      while (widgetRef.current.firstChild) {
-        widgetRef.current.removeChild(widgetRef.current.firstChild);
-      }
-
-      // ウィジェットのスクリプトを実行
-      const container = document.createElement('div');
-      container.innerHTML = recommendation.rakutenWidget;
-
-      // スクリプトを実行
-      const scripts = container.getElementsByTagName('script');
-      Array.from(scripts).forEach(oldScript => {
-        const newScript = document.createElement('script');
-        
-        // スクリプトの属性をコピー
-        Array.from(oldScript.attributes).forEach(attr => {
-          newScript.setAttribute(attr.name, attr.value);
-        });
-        
-        // インラインスクリプトの場合、内容をコピー
-        if (oldScript.innerHTML) {
-          newScript.innerHTML = oldScript.innerHTML;
-        }
-        
-        // 外部スクリプトの場合、srcをコピー
-        if (oldScript.src) {
-          newScript.src = oldScript.src;
-        }
-        
-        // 古いスクリプトを削除し、新しいスクリプトを追加
-        oldScript.parentNode?.removeChild(oldScript);
-        widgetRef.current?.appendChild(newScript);
-      });
-
-      // スクリプト以外の要素を追加
-      Array.from(container.children).forEach(child => {
-        if (child.tagName !== 'SCRIPT') {
-          widgetRef.current?.appendChild(child);
-        }
-      });
-    }
-  }, [recommendation.rakutenWidget]);
-
-  if (recommendation.rakutenWidget) {
-    return (
-      <div 
-        ref={widgetRef}
-        className="bg-white rounded-lg overflow-hidden border border-gray-200 p-4 min-h-[80px] flex items-center justify-center"
-      />
-    );
-  }
-
   return (
     <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
       <div className="p-4">
@@ -105,4 +49,4 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
   );
 };
 
-export default RecommendationCard;
+export default RecommendationCard
