@@ -84,7 +84,6 @@ export const results: Result[] = [
         affiliateLink: "https://example.com/tech-academy"
       }
     }
-  }
 ];
 
 export const getResultByType = (typeCounts: { [key: string]: number }): Result => {
