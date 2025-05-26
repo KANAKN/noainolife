@@ -34,7 +34,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
   return (
     <div className="w-full animate-fadeIn">
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-4">
         <div 
           className="p-6"
           style={{ backgroundColor: typeColor }}
@@ -103,19 +103,19 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         </div>
       </div>
 
-      <div className="bg-gray-50 rounded-xl p-8 mb-8">
-        <h3 className="text-xl font-bold text-gray-800 mb-6">
+      <div className="bg-gray-50 rounded-xl p-4 mb-4">
+        <h3 className="text-xl font-bold text-gray-800 mb-2">
           あなたにおすすめのアイテム
         </h3>
         {result.recommendations.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-8 last:mb-0">
-            <h4 className="text-lg font-medium text-gray-700 mb-2">
+          <div key={categoryIndex} className="mb-2 last:mb-0">
+            <h4 className="text-lg font-medium text-gray-700 mb-1">
               {category.subtitle}
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="flex items-stretch">
-                  <div className="w-full bg-white rounded-lg shadow-sm p-4 flex items-center justify-center">
+                  <div className="w-full bg-white rounded-lg shadow-sm p-2 flex items-center justify-center">
                     <RecommendationCard recommendation={item} />
                   </div>
                 </div>
