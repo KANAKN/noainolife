@@ -10,10 +10,10 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
 
   useEffect(() => {
     if (recommendation.rakutenWidget && widgetRef.current) {
-      // Clear previous content
+      // 既存のコンテンツをクリア
       widgetRef.current.innerHTML = '';
       
-      // Create and append scripts
+      // スクリプトを作成して追加
       const container = document.createElement('div');
       container.innerHTML = recommendation.rakutenWidget;
       
@@ -21,15 +21,15 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
       Array.from(scripts).forEach(script => {
         const newScript = document.createElement('script');
         
-        // Copy attributes
+        // 属性をコピー
         Array.from(script.attributes).forEach(attr => {
           newScript.setAttribute(attr.name, attr.value);
         });
         
-        // Copy content
+        // コンテンツをコピー
         newScript.textContent = script.textContent;
         
-        // Replace old script with new one
+        // 古いスクリプトを新しいものに置き換え
         if (widgetRef.current) {
           widgetRef.current.appendChild(newScript);
         }
@@ -41,7 +41,7 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
     return (
       <div 
         ref={widgetRef}
-        className="bg-white rounded-lg overflow-hidden border border-gray-200 p-4"
+        className="bg-white rounded-lg overflow-hidden border border-gray-200 p-4 min-h-[80px]"
       />
     );
   }
