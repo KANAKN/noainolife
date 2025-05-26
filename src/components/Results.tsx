@@ -111,8 +111,11 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
           あなたにおすすめのアイテム
         </h3>
+        <p className="text-center text-gray-600 text-sm mb-6">
+          悩みはAIに相談して、あとは寝る
+        </p>
         {result.recommendations.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="mb-6 last:mb-0">
+          <div key={categoryIndex} className="mb-4 last:mb-0">
             <h4 className="text-lg font-medium text-gray-700 mb-4 text-center">
               {category.subtitle}
             </h4>
