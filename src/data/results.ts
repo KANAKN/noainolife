@@ -13,6 +13,17 @@ export const results: Result[] = [
         items: [
           {
             html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+          },
+          {
+            html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+          }
+        ]
+      },
+      {
+        subtitle: "仕事の効率を上げるためのテクノロジーアイテム",
+        items: [
+          {
+            html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
           }
         ]
       }
@@ -27,6 +38,14 @@ export const results: Result[] = [
     recommendations: [
       {
         subtitle: "夢見がちなあなたの個人情報を守る、頼れるガーディアン",
+        items: [
+          {
+            html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+          }
+        ]
+      },
+      {
+        subtitle: "あなたの直感を大切にする、心に寄り添うアイテム",
         items: [
           {
             html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
@@ -49,6 +68,14 @@ export const results: Result[] = [
             html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
           }
         ]
+      },
+      {
+        subtitle: "アイデアを広げる、インスピレーションツール",
+        items: [
+          {
+            html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+          }
+        ]
       }
     ]
   },
@@ -61,6 +88,14 @@ export const results: Result[] = [
     recommendations: [
       {
         subtitle: "プライバシーを重視するあなたに、最小限の安心を",
+        items: [
+          {
+            html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+          }
+        ]
+      },
+      {
+        subtitle: "デジタルデトックスのためのオフライングッズ",
         items: [
           {
             html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487c6190.cded5257.487c6191.ff7e4714/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Faobax%2Faobaneckpirob%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjEyOHgxMjgiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487c6190.cded5257.487c6191.ff7e4714/?me_id=1382506&item_id=10000553&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Faobax%2Fcabinet%2Fkyoup9%2Faobaneckpirob.jpg%3F_ex%3D128x128&s=128x128&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
