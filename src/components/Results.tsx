@@ -116,7 +116,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             <h4 className="text-lg font-medium text-gray-700 mb-4 text-center">
               {category.subtitle}
             </h4>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center items-start gap-4">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] flex justify-center">
                   <div className="w-full bg-white rounded-lg shadow-sm p-4">
