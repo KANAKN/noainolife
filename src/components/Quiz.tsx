@@ -12,13 +12,16 @@ const Quiz: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
-    'リアリスト型': 0,
-    'ロマンチスト型': 0,
-    'シンクロニスト型': 0,
-    'エスケーパー型': 0
+    'リアリスト型': 2,
+    'ロマンチスト型': 1,
+    'シンクロニスト型': 1,
+    'エスケーパー型': 2
   });
-  const [isComplete, setIsComplete] = useState(false);
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+  const [isComplete, setIsComplete] = useState(true);
+  const [userInfo, setUserInfo] = useState<UserInfo | null>({
+    ageGroup: '25-29歳',
+    gender: '女性'
+  });
 
   const handleUserInfoSubmit = (info: UserInfo) => {
     setUserInfo(info);
