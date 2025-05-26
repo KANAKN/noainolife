@@ -4,7 +4,7 @@ export const results: Result[] = [
   {
     type: "リアリスト型",
     title: "実用性を重視し、効率や成果を優先するタイプ。AIをツールとして冷静に評価し、仕事や生活を合理的に進めたい人。",
-    description: "AIを"超人ツール"としてうまく活用できる素質あり。",
+    description: "AIを\"超人ツール\"としてうまく活用できる素質あり。",
     aiRelationship: "効率一辺倒にならず、クリエイティブな使い方や学びの幅も意識して。遊び心のあるツールを使うと新しい発見があるかも。",
     cautionPoint: "効率重視が強みですが、時には柔軟な発想も大切です。",
     recommendations: [
