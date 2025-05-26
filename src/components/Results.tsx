@@ -72,7 +72,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
-              ヒント
+              あなたへのヒント
             </h3>
             <div 
               className="border-l-4 p-4 rounded"
