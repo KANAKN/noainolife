@@ -47,49 +47,49 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         <div className="p-8 space-y-4">
           <div className="border-b border-gray-100 pb-4">
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
               style={{ color: typeColor }}
             >
               キャッチコピー
             </h3>
-            <p className="text-2xl font-bold text-gray-800 text-center">
+            <p className="text-2xl font-bold text-gray-800">
               {result.title}
             </p>
           </div>
 
           <div className="border-b border-gray-100 pb-4">
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
               style={{ color: typeColor }}
             >
               特徴と性格傾向
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="text-lg text-gray-700 leading-relaxed">
               {result.description}
             </p>
           </div>
 
           <div className="border-b border-gray-100 pb-4">
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
               style={{ color: typeColor }}
             >
               AIとの関係性
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="text-lg text-gray-700 leading-relaxed">
               {result.aiRelationship}
             </p>
           </div>
 
           <div>
             <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-center"
+              className="text-sm font-semibold uppercase tracking-wider mb-2"
               style={{ color: typeColor }}
             >
               注意点
             </h3>
             <div 
-              className="border-l-4 p-4 rounded text-center"
+              className="border-l-4 p-4 rounded"
               style={{ 
                 backgroundColor: `${typeColor}15`,
                 borderColor: typeColor
@@ -108,18 +108,18 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
       </div>
 
       <div className="bg-gray-50 rounded-xl p-4 mb-4">
-        <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
+        <h3 className="text-xl font-bold text-gray-800 mb-2">
           あなたにおすすめのアイテム
         </h3>
         {result.recommendations.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-2 last:mb-0">
-            <h4 className="text-lg font-medium text-gray-700 mb-1 text-center">
+            <h4 className="text-lg font-medium text-gray-700 mb-1">
               {category.subtitle}
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="h-full">
-                  <div className="w-full h-full bg-white rounded-lg shadow-sm p-2 flex items-center justify-center">
+                  <div className="w-full h-full bg-white rounded-lg shadow-sm p-2">
                     <RecommendationCard recommendation={item} />
                   </div>
                 </div>
