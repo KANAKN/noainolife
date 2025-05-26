@@ -13,10 +13,10 @@ const Quiz: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
-    'リアリスト型': 1,
-    'ロマンチスト型': 3,
-    'シンクロニスト型': 1,
-    'エスケーパー型': 1
+    'リアリスト型': 0,
+    'ロマンチスト型': 0,
+    'シンクロニスト型': 6,
+    'エスケーパー型': 0
   });
   const [isComplete, setIsComplete] = useState(true);
   const [userInfo, setUserInfo] = useState<UserInfo | null>({
