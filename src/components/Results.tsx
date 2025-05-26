@@ -114,8 +114,8 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
               {category.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="flex items-stretch">
-                  <div className="w-full bg-white rounded-lg shadow-sm p-2 flex items-center justify-center">
+                <div key={itemIndex} className="h-full">
+                  <div className="w-full h-full bg-white rounded-lg shadow-sm p-2">
                     <RecommendationCard recommendation={item} />
                   </div>
                 </div>
