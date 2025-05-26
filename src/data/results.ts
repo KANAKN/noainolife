@@ -33,6 +33,18 @@ export const results: Result[] = [
             priceDate: "2025/5/26"
           }
         ]
+      },
+      {
+        subtitle: "効率重視派におすすめのアイテム",
+        items: [
+          {
+            title: "楽天市場の売れ筋ランキング",
+            description: "AIが選ぶ、あなたにぴったりの商品",
+            imageUrl: "",
+            affiliateLink: "",
+            rakutenWidget: `<script type="text/javascript">rakuten_design="slide";rakuten_affiliateId="487b761c.b00d23a6.487b761d.44721a44";rakuten_items="ranking";rakuten_genreId="0";rakuten_size="468x60";rakuten_target="_blank";rakuten_theme="gray";rakuten_border="off";rakuten_auto_mode="on";rakuten_genre_title="off";rakuten_recommend="on";rakuten_ts="1748249100654";</script><script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>`
+          }
+        ]
       }
     ]
   },
@@ -53,6 +65,18 @@ export const results: Result[] = [
             affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
             price: "11,980円（税込、送料無料)",
             priceDate: "2025/5/26"
+          }
+        ]
+      },
+      {
+        subtitle: "ロマンチストのためのトレンドアイテム",
+        items: [
+          {
+            title: "楽天市場の売れ筋ランキング",
+            description: "AIが選ぶ、あなたの心をときめかせるアイテム",
+            imageUrl: "",
+            affiliateLink: "",
+            rakutenWidget: `<script type="text/javascript">rakuten_design="slide";rakuten_affiliateId="487b761c.b00d23a6.487b761d.44721a44";rakuten_items="ranking";rakuten_genreId="0";rakuten_size="468x60";rakuten_target="_blank";rakuten_theme="gray";rakuten_border="off";rakuten_auto_mode="on";rakuten_genre_title="off";rakuten_recommend="on";rakuten_ts="1748249100654";</script><script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>`
           }
         ]
       }
@@ -77,6 +101,18 @@ export const results: Result[] = [
             priceDate: "2025/5/26"
           }
         ]
+      },
+      {
+        subtitle: "シンクロニストのための発見アイテム",
+        items: [
+          {
+            title: "楽天市場の売れ筋ランキング",
+            description: "AIが選ぶ、あなたの好奇心を刺激するアイテム",
+            imageUrl: "",
+            affiliateLink: "",
+            rakutenWidget: `<script type="text/javascript">rakuten_design="slide";rakuten_affiliateId="487b761c.b00d23a6.487b761d.44721a44";rakuten_items="ranking";rakuten_genreId="0";rakuten_size="468x60";rakuten_target="_blank";rakuten_theme="gray";rakuten_border="off";rakuten_auto_mode="on";rakuten_genre_title="off";rakuten_recommend="on";rakuten_ts="1748249100654";</script><script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>`
+          }
+        ]
       }
     ]
   },
@@ -97,6 +133,18 @@ export const results: Result[] = [
             affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
             price: "11,980円（税込、送料無料)",
             priceDate: "2025/5/26"
+          }
+        ]
+      },
+      {
+        subtitle: "エスケーパーのための厳選アイテム",
+        items: [
+          {
+            title: "楽天市場の売れ筋ランキング",
+            description: "AIが選ぶ、プライバシーを重視した安心アイテム",
+            imageUrl: "",
+            affiliateLink: "",
+            rakutenWidget: `<script type="text/javascript">rakuten_design="slide";rakuten_affiliateId="487b761c.b00d23a6.487b761d.44721a44";rakuten_items="ranking";rakuten_genreId="0";rakuten_size="468x60";rakuten_target="_blank";rakuten_theme="gray";rakuten_border="off";rakuten_auto_mode="on";rakuten_genre_title="off";rakuten_recommend="on";rakuten_ts="1748249100654";</script><script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>`
           }
         ]
       }

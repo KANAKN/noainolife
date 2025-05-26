@@ -31,6 +31,7 @@ export interface Recommendation {
   affiliateLink: string;
   price?: string;
   priceDate?: string;
+  rakutenWidget?: string;
 }
 
 export interface TypeCount {

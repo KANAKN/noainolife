@@ -6,6 +6,15 @@ interface RecommendationCardProps {
 }
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation }) => {
+  if (recommendation.rakutenWidget) {
+    return (
+      <div 
+        className="bg-white rounded-lg overflow-hidden border border-gray-200 p-4"
+        dangerouslySetInnerHTML={{ __html: recommendation.rakutenWidget }}
+      />
+    );
+  }
+
   return (
     <div className="bg-white rounded-lg overflow-hidden border border-gray-200">
       <div className="p-4">
@@ -49,4 +58,4 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
   );
 };
 
-export default RecommendationCard
+export default RecommendationCard;
