@@ -26,7 +26,7 @@ export const results: Result[] = [
     cautionPoint: "情報の取捨選択が曖昧になり、フェイクにも影響されやすいことも。",
     recommendations: [
       {
-        title:,
+        title: "",
         description: "AIが24時間365日見守る安心のセキュリティ。大切な思い出と個人情報を守り、安全なオンライン体験を。",
         imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
         affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
