@@ -18,38 +18,10 @@ const Quiz: React.FC = () => {
     'エスケーパー型': 0
   });
   const [isComplete, setIsComplete] = useState(false);
-  const [userInfo] = useState<UserInfo>({ 
-    ageGroup: '30-34歳',
-    gender: 'その他'
-  });
+  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
-  const handleOptionSelect = async (option: Option) => {
-    const newSelectedOptions = [...selectedOptions];
-    newSelectedOptions[currentQuestionIndex] = option;
-    setSelectedOptions(newSelectedOptions);
-
-    const newTypeCounts = { ...typeCounts };
-    newTypeCounts[option.type] = (newTypeCounts[option.type] || 0) + 1;
-    setTypeCounts(newTypeCounts);
-
-    if (currentQuestionIndex < questions.length - 1) {
-      setTimeout(() => {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-      }, 500);
-    } else {
-      if (userInfo) {
-        const quizResponse: QuizResponse = {
-          ageGroup: userInfo.ageGroup,
-          gender: userInfo.gender,
-          answers: newSelectedOptions.map((option, index) => ({
-            questionId: questions[index].id,
-            selectedType: option.type
-          }))
-        };
-        await saveQuizResponse(quizResponse);
-      }
-      setIsComplete(true);
-    }
+  const handleUserInfoSubmit = (info: UserInfo) => {
+    setUserInfo(info);
   };
 
   const saveQuizResponse = async (response: QuizResponse) => {
@@ -81,6 +53,35 @@ const Quiz: React.FC = () => {
     }
   };
 
+  const handleOptionSelect = async (option: Option) => {
+    const newSelectedOptions = [...selectedOptions];
+    newSelectedOptions[currentQuestionIndex] = option;
+    setSelectedOptions(newSelectedOptions);
+
+    const newTypeCounts = { ...typeCounts };
+    newTypeCounts[option.type] = (newTypeCounts[option.type] || 0) + 1;
+    setTypeCounts(newTypeCounts);
+
+    if (currentQuestionIndex < questions.length - 1) {
+      setTimeout(() => {
+        setCurrentQuestionIndex(currentQuestionIndex + 1);
+      }, 500);
+    } else {
+      if (userInfo) {
+        const quizResponse: QuizResponse = {
+          ageGroup: userInfo.ageGroup,
+          gender: userInfo.gender,
+          answers: newSelectedOptions.map((option, index) => ({
+            questionId: questions[index].id,
+            selectedType: option.type
+          }))
+        };
+        await saveQuizResponse(quizResponse);
+      }
+      setIsComplete(true);
+    }
+  };
+
   const handleRestart = () => {
     setCurrentQuestionIndex(0);
     setSelectedOptions([]);
@@ -91,6 +92,7 @@ const Quiz: React.FC = () => {
       'エスケーパー型': 0
     });
     setIsComplete(false);
+    setUserInfo(null);
   };
 
   const renderHeader = () => (
@@ -122,6 +124,15 @@ const Quiz: React.FC = () => {
     </div>
   );
 
+  if (!userInfo) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        {renderHeader()}
+        <UserInfoForm onSubmit={handleUserInfoSubmit} />
+      </div>
+    );
+  }
+
   if (isComplete) {
     const result = getResultByType(typeCounts);
     return (
@@ -133,7 +144,6 @@ const Quiz: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {renderHeader()}
       <div className="w-full max-w-2xl mx-auto">
         <ProgressBar 
           currentStep={currentQuestionIndex + 1} 
