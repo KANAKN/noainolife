@@ -34,6 +34,10 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
   return (
     <div className="w-full animate-fadeIn">
+      <h1 className="text-4xl font-bold text-white text-center mb-8">
+        診断結果
+      </h1>
+      
       <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-4">
         <div 
           className="p-6"
