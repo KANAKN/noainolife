@@ -27,11 +27,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareImage = getShareImage(resultType);
   
   const shareToFacebook = () => {
-    // Facebook SDKを使用せずにシェアダイアログを開く
-    const fbShareUrl = new URL('https://www.facebook.com/dialog/share');
-    fbShareUrl.searchParams.append('href', shareUrl);
-    fbShareUrl.searchParams.append('display', 'popup');
-    fbShareUrl.searchParams.append('quote', shareText);
+    const fbShareUrl = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}`;
     
     const width = 626;
     const height = 436;
@@ -39,9 +35,9 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     const top = (window.innerHeight - height) / 2;
 
     window.open(
-      fbShareUrl.toString(),
+      fbShareUrl,
       'facebook-share-dialog',
-      `width=${width},height=${height},left=${left},top=${top},toolbar=0,status=0`
+      `width=${width},height=${height},left=${left},top=${top},toolbar=0,status=0,menubar=0,scrollbars=0`
     );
   };
   
