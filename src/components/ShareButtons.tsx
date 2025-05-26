@@ -27,18 +27,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareImage = getShareImage(resultType);
   
   const shareToFacebook = () => {
-    // Facebook SDKを使用したシェア
-    if (window.FB) {
-      window.FB.ui({
-        method: 'share',
-        href: shareUrl,
-        quote: shareText,
-      });
-    } else {
-      // フォールバック：通常のシェアダイアログ
-      const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
-      window.open(fbShareUrl, 'facebook-share-dialog', 'width=626,height=436');
-    }
+    const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+    window.open(fbShareUrl, '_blank', 'width=600,height=400');
   };
   
   const shareToX = () => {
