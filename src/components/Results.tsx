@@ -111,16 +111,11 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
           あなたにおすすめのアイテム
         </h3>
-        <p className="text-center text-gray-600 text-sm mb-6">
+        <p className="text-center text-gray-600 text-sm mb-4">
           悩みはAIに相談して、あとは寝る
         </p>
         {result.recommendations.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-4 last:mb-0">
-            {category.subtitle && (
-              <h4 className="text-lg font-medium text-gray-700 mb-4 text-center">
-                {category.subtitle}
-              </h4>
-            )}
             <div className="flex flex-wrap justify-center gap-4">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] flex justify-center">
@@ -134,7 +129,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         ))}
       </div>
 
-      <div className="mt-10 text-center">
+      <div className="mt-6 text-center">
         <button
           onClick={onRestart}
           className="px-6 py-3 bg-white text-gray-800 rounded-lg hover:bg-gray-100 transition-colors shadow-md hover:shadow-lg"
