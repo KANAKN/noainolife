@@ -29,14 +29,14 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
               href={recommendation.affiliateLink}
               target="_blank" 
               rel="nofollow sponsored noopener"
-              className="block text-sm leading-snug text-gray-800 hover:text-gray-600 mb-2"
+              className="block text-lg font-medium text-gray-800 hover:text-gray-600 mb-2"
             >
               {recommendation.title}
             </a>
             <p className="text-sm text-gray-600">{recommendation.description}</p>
             {recommendation.price && (
               <p className="mt-2">
-                <span className="text-base">価格：{recommendation.price}</span>
+                <span className="text-base font-medium">{recommendation.price}</span>
                 {recommendation.priceDate && (
                   <span className="text-gray-400 text-sm ml-2">({recommendation.priceDate}時点)</span>
                 )}
@@ -48,5 +48,3 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
     </div>
   );
 };
-
-export default RecommendationCard;

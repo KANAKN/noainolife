@@ -34,7 +34,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
   return (
     <div className="w-full animate-fadeIn">
-
       <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
         <div 
           className="p-6"
@@ -106,13 +105,20 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
       <div className="bg-gray-50 rounded-xl p-8 mb-8">
         <h3 className="text-xl font-bold text-gray-800 mb-6">
-          あなたにおすすめのアイテム：
+          あなたにおすすめのアイテム
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {result.recommendations.map((recommendation, index) => (
-            <RecommendationCard key={index} recommendation={recommendation} />
-          ))}
-        </div>
+        {result.recommendations.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-8 last:mb-0">
+            <h4 className="text-lg font-medium text-gray-700 mb-4">
+              {category.subtitle}
+            </h4>
+            <div className="grid grid-cols-1 gap-4">
+              {category.items.map((item, itemIndex) => (
+                <RecommendationCard key={itemIndex} recommendation={item} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       <ShareButtons resultType={result.type} />

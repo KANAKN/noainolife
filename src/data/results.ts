@@ -9,12 +9,30 @@ export const results: Result[] = [
     cautionPoint: "柔軟性に欠けたり、人との関係で冷たく見られることも。",
     recommendations: [
       {
-        title: "",
-        description: "AIを活用した高度なセキュリティ保護",
-        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
-        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
-        price: "11,980円（税込、送料無料)",
-        priceDate: "2025/5/26"
+        subtitle: "効率重視なあなたには、安全で確実なセキュリティツールがおすすめ！",
+        items: [
+          {
+            title: "ノートン360 スタンダード",
+            description: "AIを活用した高度なセキュリティ保護。1台3年版でマルチデバイスに対応。",
+            imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+            affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
+            price: "11,980円（税込、送料無料)",
+            priceDate: "2025/5/26"
+          }
+        ]
+      },
+      {
+        subtitle: "生産性を高めるためのデジタルツール",
+        items: [
+          {
+            title: "ChatGPT Plus サブスクリプション",
+            description: "より高速で安定した応答と、最新モデルへのアクセスで業務効率を最大化",
+            imageUrl: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+            affiliateLink: "https://chat.openai.com/",
+            price: "月額 $20",
+            priceDate: "2025/5/26"
+          }
+        ]
       }
     ]
   },
@@ -26,12 +44,17 @@ export const results: Result[] = [
     cautionPoint: "情報の取捨選択が曖昧になり、フェイクにも影響されやすいことも。",
     recommendations: [
       {
-        title: "",
-        description: "AIが24時間365日見守る安心のセキュリティ。大切な思い出と個人情報を守り、安全なオンライン体験を。",
-        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
-        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
-        price: "11,980円（税込、送料無料)",
-        priceDate: "2025/5/26"
+        subtitle: "夢見がちなあなたの個人情報を守る、頼れるガーディアン",
+        items: [
+          {
+            title: "ノートン360 スタンダード",
+            description: "AIが24時間365日見守る安心のセキュリティ。大切な思い出と個人情報を守ります。",
+            imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+            affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
+            price: "11,980円（税込、送料無料)",
+            priceDate: "2025/5/26"
+          }
+        ]
       }
     ]
   },
@@ -43,12 +66,17 @@ export const results: Result[] = [
     cautionPoint: "情報過多になりがちで、まとまりを失うことも。",
     recommendations: [
       {
-        title: "",
-        description: "最新AI技術で進化し続けるセキュリティ。新しい発見と創造的な活動を安全に楽しめる環境を提供。",
-        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
-        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
-        price: "11,980円（税込、送料無料)",
-        priceDate: "2025/5/26"
+        subtitle: "クリエイティブなあなたの探求心を守るセキュリティ",
+        items: [
+          {
+            title: "ノートン360 スタンダード",
+            description: "最新AI技術で進化し続けるセキュリティ。新しい発見と創造的な活動を安全に。",
+            imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+            affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
+            price: "11,980円（税込、送料無料)",
+            priceDate: "2025/5/26"
+          }
+        ]
       }
     ]
   },
@@ -60,12 +88,17 @@ export const results: Result[] = [
     cautionPoint: "情報に背を向けすぎて、損をしてしまうことも。",
     recommendations: [
       {
-        title: "",
-        description: "プライバシーを重視した安全設計。必要最小限のAI活用で、静かに、でもしっかりとデバイスを保護。",
-        imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
-        affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
-        price: "11,980円（税込、送料無料)",
-        priceDate: "2025/5/26"
+        subtitle: "プライバシーを重視するあなたに、最小限の安心を",
+        items: [
+          {
+            title: "ノートン360 スタンダード",
+            description: "プライバシーを重視した安全設計。必要最小限のAI活用で、静かに、でもしっかりと保護。",
+            imageUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/norton/cabinet/08738151/08785216/n360_standard_1-3.jpg",
+            affiliateLink: "https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21447537%2F",
+            price: "11,980円（税込、送料無料)",
+            priceDate: "2025/5/26"
+          }
+        ]
       }
     ]
   }
