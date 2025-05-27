@@ -99,7 +99,7 @@ const Quiz: React.FC = () => {
     <div className="w-[90%] md:w-[60%] mx-auto mb-12">
       <div className="flex justify-end mb-4">
         <img 
-          src="/no-ai-no-life-logo.png" 
+          src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/no-ai-no-life-logo.png" 
           alt="NO AI, NO LIFE" 
           className="w-24 h-24 object-contain"
         />
