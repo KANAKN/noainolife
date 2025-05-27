@@ -63,11 +63,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
               {result.description2}
             </p>
           </div>
-          <div className="border-b border-gray-100 pb-4">
-            <p className="text-lg text-gray-700 leading-relaxed">
-            </p>
-          </div>
-
           <div>
             <h3 
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
