@@ -55,7 +55,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             >
               あなたの特徴と傾向
             </h3>
-            <p className="text-2xl font-bold text-gray-800 padding-bottom:10px">
+            <p className="text-2xl font-bold text-gray-800 mb-4">
               {result.description}
             </p>
             <p className="text-2xl font-bold text-gray-800">
