@@ -116,9 +116,11 @@ const Quiz: React.FC = () => {
             6つの質問に答えて、あなたのAI信仰度とタイプを診断。
           </p>
           <p className="text-base text-white mb-2">
-            診断結果では、あなたに合ったヒントやおすすめ（※PR含む）も紹介します。
-            診断結果はSNSでシェア！
+            診断結果では、あなたに合ったヒントやおすすめ（※PR含む）も紹介します。</p>
+          <p className="text-base text-white mb-2">
+          診断結果はSNSでシェア！
             #NoAINoLife診断 #AIタイプ診断 #生成AI
+</p>
           </p>
         </div>
       </div>
