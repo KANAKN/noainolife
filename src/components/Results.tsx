@@ -51,7 +51,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         <div className="p-8 space-y-4">
           <div className="border-b border-gray-100 pb-4">
             <p className="text-2xl font-bold text-gray-800">
-              {result.title}
+              {result.description}
             </p>
           </div>
 
@@ -63,7 +63,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
               あなたのAI信仰傾向
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
-              {result.description}
+              {result.description2}
             </p>
           </div>
 

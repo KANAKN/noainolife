@@ -12,8 +12,8 @@ export interface Option {
 
 export interface Result {
   type: string;
-  title: string;
   description: string;
+  description2: string;
   aiRelationship: string;
   cautionPoint: string;
   recommendations: RecommendationCategory[];
