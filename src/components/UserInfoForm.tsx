@@ -27,48 +27,58 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
   const genders = ['男性', '女性', 'その他', '回答しない'];
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
-      <div className="mb-6">
-        <label className="block text-[#ffff30] text-sm font-bold mb-2">
-          性別
-        </label>
-        <select
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-          required
-        >
-          <option value="">選択してください</option>
-          {genders.map((g) => (
-            <option key={g} value={g}>{g}</option>
-          ))}
-        </select>
-      </div>
+    <div className="w-full max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="mb-8">
+        <div className="mb-6">
+          <label className="block text-[#ffff30] text-sm font-bold mb-2">
+            性別
+          </label>
+          <select
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            required
+          >
+            <option value="">選択してください</option>
+            {genders.map((g) => (
+              <option key={g} value={g}>{g}</option>
+            ))}
+          </select>
+        </div>
 
-      <div className="mb-6">
-        <label className="block text-[#ffff30] text-sm font-bold mb-2">
-          年齢
-        </label>
-        <select
-          value={ageGroup}
-          onChange={(e) => setAgeGroup(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
-          required
-        >
-          <option value="">選択してください</option>
-          {ageGroups.map((age) => (
-            <option key={age} value={age}>{age}</option>
-          ))}
-        </select>
-      </div>
+        <div className="mb-6">
+          <label className="block text-[#ffff30] text-sm font-bold mb-2">
+            年齢
+          </label>
+          <select
+            value={ageGroup}
+            onChange={(e) => setAgeGroup(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            required
+          >
+            <option value="">選択してください</option>
+            {ageGroups.map((age) => (
+              <option key={age} value={age}>{age}</option>
+            ))}
+          </select>
+        </div>
 
-      <button
-        type="submit"
-        className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
-      >
-        診断を始める
-      </button>
-    </form>
+        <button
+          type="submit"
+          className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+        >
+          診断を始める
+        </button>
+      </form>
+
+      <div className="flex justify-center">
+        <img 
+          src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/no-ai-no-life-logo.png" 
+          alt="NO AI, NO LIFE" 
+          className="w-32 h-32 object-contain"
+        />
+      </div>
+    </div>
   );
 };
 
