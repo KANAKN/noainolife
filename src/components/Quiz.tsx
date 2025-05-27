@@ -102,7 +102,7 @@ const Quiz: React.FC = () => {
           <img
             src="../women_robot_600.png"
             alt="Human and AI face to face"
-            className="w-80 object-contain"
+            className="w-82 object-contain"
           />
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
