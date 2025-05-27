@@ -69,14 +69,6 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
         >
           診断を始める
         </button>
-
-        <div className="flex justify-center">
-          <img 
-            src="../noainolife_mini.png" 
-            alt="NO AI, NO LIFE" 
-            className="w-10 h-10 object-contain"
-          />
-        </div>
       </form>
     </div>
   );
