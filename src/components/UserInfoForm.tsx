@@ -74,7 +74,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
           <img 
             src="../noainolife_mini.png" 
             alt="NO AI, NO LIFE" 
-            className="w-48 h-48 object-contain"
+            className="w-10 h-10 object-contain"
           />
         </div>
       </form>
