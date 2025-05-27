@@ -110,7 +110,7 @@ const Quiz: React.FC = () => {
         </h1>
         <div className="w-full max-w-md mx-auto text-left">
           <p className="text-lg text-white mb-4">
-            AIとどう向き合うかで、あなたの価値観が見えてくる。
+            ーー AIとどう向き合うかで、あなたの価値観が見えてくる ーー
             <br />
             6つの質問に答えて、あなたのAIタイプを診断します。
           </p>
