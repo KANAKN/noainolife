@@ -111,7 +111,7 @@ const Quiz: React.FC = () => {
         <div className="w-full max-w-md mx-auto text-left">
           <p className="text-lg text-white mb-4">
             ーー AIとどう向き合うかで、あなたの価値観が見えてくる ーー
-            <br />
+            <br /><br />
             6つの質問に答えて、あなたのAIタイプを診断します。
           </p>
           <p className="text-base text-white mb-2">
