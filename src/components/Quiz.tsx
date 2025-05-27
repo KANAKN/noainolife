@@ -112,7 +112,7 @@ const Quiz: React.FC = () => {
           <p className="text-lg text-white mb-4">
             AIとどう向き合うかで、あなたの価値観が見えてくる。
             <br />
-            6つの質問に答えて、あなたのAIタイプを診断。
+            6つの質問に答えて、あなたのAIタイプを診断します。
           </p>
           <p className="text-base text-white mb-2">
             診断結果では、あなたに合ったヒントやおすすめ（※PR含む）も紹介します。
