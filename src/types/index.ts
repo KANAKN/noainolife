@@ -15,6 +15,7 @@ export interface Result {
   title: string;
   description: string;
   aiRelationship: string;
+  cautionPoint: string;
   recommendations: RecommendationCategory[];
 }
 
@@ -24,10 +25,10 @@ export interface RecommendationCategory {
 }
 
 export interface Recommendation {
-  title: string;
-  description: string;
-  imageUrl: string;
-  affiliateLink: string;
+  title?: string;
+  description?: string;
+  imageUrl?: string;
+  affiliateLink?: string;
   price?: string;
   priceDate?: string;
   html?: string;
