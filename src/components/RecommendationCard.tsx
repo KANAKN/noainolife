@@ -9,8 +9,19 @@ const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation 
   if (recommendation.html) {
     return (
       <div 
-        className="w-full h-full flex items-center justify-center"
-        dangerouslySetInnerHTML={{ __html: recommendation.html }}
+        className="w-full h-full flex items-stretch"
+        dangerouslySetInnerHTML={{ 
+          __html: recommendation.html.replace(
+            'margin:5px;',
+            'margin:0;'
+          ).replace(
+            'margin:0px;',
+            'margin:0;'
+          ).replace(
+            'padding:5px 0;',
+            'padding:12px;'
+          )
+        }}
       />
     );
   }
