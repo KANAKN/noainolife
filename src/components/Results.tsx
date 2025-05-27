@@ -49,11 +49,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         </div>        
         <div className="p-8 space-y-4">
           <div className="border-b border-gray-100 pb-4">
-            <p className="text-2xl font-bold text-gray-800">
-              {result.title}
-            </p>
-          </div>
-          <div className="">
             <h3 
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
