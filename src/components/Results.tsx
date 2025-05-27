@@ -58,6 +58,8 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           <div className="border-b border-gray-100 pb-4">
             <p className="text-2xl font-bold text-gray-800">
               {result.description}
+            </p>
+            <p>              
               {result.description2}
             </p>
           </div>
