@@ -65,19 +65,19 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+          className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity mb-8"
         >
           診断を始める
         </button>
-      </form>
 
-      <div className="flex justify-center">
-        <img 
-          src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/no-ai-no-life-logo.png" 
-          alt="NO AI, NO LIFE" 
-          className="w-32 h-32 object-contain"
-        />
-      </div>
+        <div className="flex justify-center">
+          <img 
+            src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/no-ai-no-life-logo.png" 
+            alt="NO AI, NO LIFE" 
+            className="w-48 h-48 object-contain"
+          />
+        </div>
+      </form>
     </div>
   );
 };
