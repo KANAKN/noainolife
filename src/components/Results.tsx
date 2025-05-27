@@ -48,12 +48,12 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           </h2>
         </div>        
         <div className="p-8 space-y-4">
-<--
+          /**
           <div className="border-b border-gray-100 pb-4">
             <p className="text-2xl font-bold text-gray-800">
               {result.title}
             </p>
-            -->
+            **/
           </div>
           <div className="border-b border-gray-100 pb-4">
             <h3 
