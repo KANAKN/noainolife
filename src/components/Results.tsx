@@ -59,7 +59,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             <p className="text-2xl font-bold text-gray-800">
               {result.description}
             </p>
-            <p>              
+            <p className="text-2xl font-bold text-gray-800">
               {result.description2}
             </p>
           </div>
