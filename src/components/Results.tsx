@@ -46,20 +46,24 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           <h2 className="text-3xl font-bold text-white text-center">
             あなたは {result.type}
           </h2>
-        </div>        
+        </div>
+        
         <div className="p-8 space-y-4">
+          <div className="border-b border-gray-100 pb-4">
+            <p className="text-2xl font-bold text-gray-800">
+              {result.title}
+            </p>
+          </div>
+
           <div className="border-b border-gray-100 pb-4">
             <h3 
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
-              特徴と傾向
+              あなたのAI信仰傾向
             </h3>
-            <p className="text-2xl font-bold text-gray-800 mb-4">
+            <p className="text-lg text-gray-700 leading-relaxed">
               {result.description}
-            </p>
-            <p className="text-2xl font-bold text-gray-800">
-              {result.description2}
             </p>
           </div>
 
