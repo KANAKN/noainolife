@@ -72,7 +72,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
         <div className="flex justify-center">
           <img 
-            src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/no-ai-no-life-logo.png" 
+            src="../noainolife.png" 
             alt="NO AI, NO LIFE" 
             className="w-48 h-48 object-contain"
           />
