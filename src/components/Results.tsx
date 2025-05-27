@@ -53,7 +53,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
-              あなたの特徴と傾向
+              特徴と傾向
             </h3>
             <p className="text-2xl font-bold text-gray-800 mb-4">
               {result.description}
