@@ -96,7 +96,7 @@ const Quiz: React.FC = () => {
   };
 
   const renderHeader = () => (
-    <div className="w-[90%] md:w-[60%] mx-auto mb-12">
+    <div className="w-[90%] md:w-[60%] mx-auto mb-1">
       <div>
         <div className="flex justify-center mb-8">
           <img
