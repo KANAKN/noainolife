@@ -105,6 +105,13 @@ const Quiz: React.FC = () => {
         />
       </div>
       <div>
+        <div className="flex justify-center mb-8">
+          <img
+            src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/human-ai-face.png"
+            alt="Human and AI face to face"
+            className="w-64 h-64 object-contain"
+          />
+        </div>
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
           AIは､あなたの友か､敵か､神か？
         </h1>
