@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Question } from './Question';
 import { Results } from './Results';
 import { UserInfoForm } from './UserInfoForm';
-import { ProgressBar } from './ProgressBar';
+import ProgressBar from './ProgressBar';
 import { questions } from '../data/questions';
 import { supabase } from '../lib/supabase';
 
@@ -69,7 +69,7 @@ const Quiz = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4">
-      <ProgressBar current={currentQuestionIndex + 1} total={questions.length} />
+      <ProgressBar currentStep={currentQuestionIndex + 1} totalSteps={questions.length} />
       <Question
         question={questions[currentQuestionIndex]}
         onAnswer={handleAnswer}
