@@ -60,7 +60,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
-              あなたのAI信仰傾向
+              特徴と傾向
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
               {result.description2}
