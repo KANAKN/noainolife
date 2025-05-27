@@ -107,7 +107,7 @@ const Quiz: React.FC = () => {
       <div>
         <div className="flex justify-center mb-8">
           <img
-            src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/human-ai-face.png"
+            src="https://raw.githubusercontent.com/stackblitz/bolt/main/assets/women_robot.png"
             alt="Human and AI face to face"
             className="w-64 h-64 object-contain"
           />
