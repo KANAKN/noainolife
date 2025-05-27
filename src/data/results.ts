@@ -34,7 +34,7 @@ export const results: Result[] = [
         subtitle: "",
         items: [
           {
-            html: '<script type="text/javascript">rakuten_design="slide";rakuten_affiliateId="487b761c.b00d23a6.487b761d.44721a44";rakuten_items="ctsmatch";rakuten_genreId="0";rakuten_size="600x200";rakuten_target="_blank";rakuten_theme="gray";rakuten_border="off";rakuten_auto_mode="on";rakuten_genre_title="off";rakuten_recommend="on";rakuten_ts="1748356239527";</script><script type="text/javascript" src="https://xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js?20230106"></script>'
+            html: '<a href="https://hb.afl.rakuten.co.jp/hsc/48877ad8.f1c3a2a1.487b6e56.3338ca58/_RTLink110199?link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOiI1OCIsImJhbiI6MzIzMDk1MiwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hsb/48877ad8.f1c3a2a1.487b6e56.3338ca58/?me_id=1&me_adv_id=3230952&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
           }
         ]
       }
