@@ -7,7 +7,7 @@ interface ShareButtonsProps {
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = window.location.href;
-  const shareText = `AIタイプ診断で自分は「${resultType}」でした！あなたも診断してみませんか？`;
+  const shareText = `AIタイプ診断で自分は「${resultType}」でした！診断してみて！`;
   
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
