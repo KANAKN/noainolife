@@ -14,11 +14,14 @@ const Quiz: React.FC = () => {
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
     'リアリスト型': 0,
     'ロマンチスト型': 0,
-    'シンクロニスト型': 0,
+    'シンクロニスト型': 6, // Set to 6 to ensure Synchronist type is selected
     'エスケーパー型': 0
   });
-  const [isComplete, setIsComplete] = useState(false);
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+  const [isComplete, setIsComplete] = useState(true); // Set to true to show results immediately
+  const [userInfo, setUserInfo] = useState<UserInfo>({
+    ageGroup: '25-29歳',
+    gender: '回答しない'
+  });
 
   const handleUserInfoSubmit = (info: UserInfo) => {
     setUserInfo(info);
