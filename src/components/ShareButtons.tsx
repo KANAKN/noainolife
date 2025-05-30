@@ -7,7 +7,7 @@ interface ShareButtonsProps {
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = 'https://noainolife.vercel.app/';
-  const shareText = `AIタイプ診断で自分は「${resultType}」でした！診断してみて！`;
+  const shareText = `AIタイプ診断で自分は「${resultType}」でした！\n\n診断はこちら👇\n${shareUrl}`;
   
   const getShareImage = () => {
     switch (resultType) {
@@ -30,7 +30,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   };
   
   const shareToX = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
     window.open(url, '_blank');
   };
   
@@ -39,7 +39,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   };
   
   const shareToLine = () => {
-    const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}`;
+    const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
     window.open(url, '_blank');
   };
 
