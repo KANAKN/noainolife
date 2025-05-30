@@ -33,15 +33,15 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
   const getTypeImage = (type: string) => {
     switch (type) {
       case 'リアリスト型':
-        return '/r.png';
+        return '../r.png';
       case 'ロマンチスト型':
-        return '/l.png';
+        return '../l.png';
       case 'シンクロニスト型':
-        return '/s.png';
+        return '../s.png';
       case 'エスケーパー型':
-        return '/e.png';
+        return '../e.png';
       default:
-        return '/r.png';
+        return '../r.png';
     }
   };
 
