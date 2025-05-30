@@ -10,10 +10,18 @@ interface ResultsProps {
   onRestart: () => void;
 }
 
+declare global {
+  interface Window {
+    updateOGImage: (type: string) => void;
+  }
+}
+
 const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+    // Update OG image when result type changes
+    window.updateOGImage(result.type);
+  }, [result.type]);
 
   const getTypeColor = (type: string) => {
     switch (type) {
