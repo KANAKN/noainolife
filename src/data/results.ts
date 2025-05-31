@@ -65,7 +65,7 @@ export const results: Result[] = [
     aiRelationship: "無理にAIを使う必要はありません。AIの動向はざっくり把握しておき「AIと適切に距離を取るための知識」として捉えると気が楽です。AIにはない「身体性」「感性」「共感力」を大切に、あなたらしい人間ライフを楽しみましょう。",
     recommendations: [
       {
-        subtitle: "スマホの時だけ、\n情報を守りたいあなたは、\nVPNで通信データをガード！",
+        subtitle: "\n情報を守りたいあなたは、\nVPNで通信データをガード！",
         items: [
           {
             html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487edb28.b577b04a.487edb2a.b3f40fe4/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Favast%2F21461081%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487edb28.b577b04a.487edb2a.b3f40fe4/?me_id=1430269&item_id=10000022&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Favast%2Fcabinet%2F11268104%2F21461081.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
