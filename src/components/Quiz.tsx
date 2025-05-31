@@ -14,8 +14,8 @@ const Quiz: React.FC = () => {
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
     'リアリスト型': 0,
     'ロマンチスト型': 0,
-    'シンクロニスト型': 6, // Set to 6 to ensure Synchronist type is selected
-    'エスケーパー型': 0
+    'シンクロニスト型': 0,
+    'エスケーパー型': 6 // Set to 6 to ensure Escaper type is selected
   });
   const [isComplete, setIsComplete] = useState(true); // Set to true to show results immediately
   const [userInfo, setUserInfo] = useState<UserInfo>({
@@ -113,12 +113,12 @@ const Quiz: React.FC = () => {
         </h1>
         <div className="w-full max-w-md mx-auto text-center">
           <p className="text-lg text-white mb-4">
-            ー AIとどう向き合うかで、<span class="block sm:inline">あなたの価値観が見えてくる ー</span>
+            ー AIとどう向き合うかで、<span className="block sm:inline">あなたの価値観が見えてくる ー</span>
           </p>
-          </div>
+        </div>
         <div className="w-full max-w-md mx-auto text-left">
           <p className="text-lg text-white mb-4">
-          6つの質問に答えて、あなたのAIタイプを診断します。
+            6つの質問に答えて、あなたのAIタイプを診断します。
           </p>
           <p className="text-base text-white mb-2">
             診断結果では、あなたに合ったヒントやおすすめ（※PR含む）も紹介します。
