@@ -73,7 +73,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
             className="py-3 md:py-2 px-4 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             <Download className="w-5 h-5" />
-            <span>画像を保存</span>
+            <span>診断結果画像を保存</span>
           </button>
         </div>
       </div>
