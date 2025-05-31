@@ -50,7 +50,7 @@ export const results: Result[] = [
     aiRelationship: "AIのめまぐるしいアップデートの中で「目的」を見失わないように注意しましょう。目的に合わせたツールのアップデートや基本機能の確認も定期的に行うと、活用力がさらに高まりそうです。",
     recommendations: [
       {
-        subtitle: "AIアプリも意外とギガ使うから",
+        subtitle: "AIアプリもけっこうギガ使うから",
         items: [
           {
             html: '<a href="https://hb.afl.rakuten.co.jp/hsc/487c7368.5d5ac78a.487b6e56.3338ca58/?link_type=pict&rafst=rmn&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MjM3Nzg5NSwiYW1wIjpmYWxzZX0%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hsb/487c7368.5d5ac78a.487b6e56.3338ca58/?me_id=2101065&me_adv_id=2377895&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
@@ -66,7 +66,7 @@ export const results: Result[] = [
     aiRelationship: "無理にAIを使う必要はありません。AIの動向はざっくり把握しておき「AIと適切に距離を取るための知識」として捉えると気が楽です。AIにはない「身体性」「感性」「共感力」を大切に、あなたらしい人間ライフを楽しみましょう。",
     recommendations: [
       {
-        subtitle: "慎重なあなたには、通信データをガードするVPNが必須！",
+        subtitle: "慎重なあなたには、通信データをガードするVPNがおすすめ！",
         items: [
           {
             html: '<table border="0" cellpadding="0" cellspacing="0"><tr><td><p style="color:#000000;font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p><br><div style="border:1px solid #95A5A6;border-radius:.75rem;background-color:#FFFFFF;width:250px;margin:0px;padding:5px 0;text-align:center;overflow:hidden;"><a href="https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21435758%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/48795f20.780e5362.48795f21.e45e322a/?me_id=1405348&item_id=10000024&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fnorton%2Fcabinet%2F08738151%2F09466055%2Fn360_secure-vpn_3-1.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]" title="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="https://hb.afl.rakuten.co.jp/ichiba/48795f20.780e5362.48795f21.e45e322a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnorton%2F21435758%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;">【ポイント高還元！お買い物マラソン】ノートン セキュア VPN 3台 1年版 ダウンロード スマホ タブレット 送料無料 VPN vpn norton セキュリティソフト スマホ ipad iphone タブレット セキュリティ ネットワーク ウイルス対策 pc 法人 microsoft windows mac</a><br><span >価格：3,890円（税込、送料無料)</span> <span style="color:#BBB">(2025/5/26時点)</span></p></div></td></tr></table>'
