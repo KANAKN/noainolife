@@ -14,8 +14,8 @@ const Quiz: React.FC = () => {
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
     'リアリスト型': 0, // Set to 6 to ensure Realist type is selected
     'ロマンチスト型': 0,
-    'シンクロニスト型': 6,
-    'エスケーパー型': 0
+    'シンクロニスト型': 0,
+    'エスケーパー型': 6
   });
   const [isComplete, setIsComplete] = useState(true); // Set to true to show results immediately
   const [userInfo, setUserInfo] = useState<UserInfo>({
