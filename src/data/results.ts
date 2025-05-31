@@ -11,10 +11,10 @@ export const results: Result[] = [
         subtitle: "すべては効率と生産性のため！",
         items: [
           {
-            html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+929KAA+5L4K+5ZMCH" rel="nofollow"><img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=250528019548&wid=001&eno=01&mid=s00000026066001006000&mc=1"></a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=455ONN+929KAA+5L4K+5ZMCH" alt="">'
+            html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+7X6NJM+50+7S2Y41" rel="nofollow"><img border="0" width="336" height="280" alt="" src="https://www21.a8.net/svt/bgt?aid=250528019479&wid=001&eno=01&mid=s00000000018047043000&mc=1"></a><img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=455ONN+7X6NJM+50+7S2Y41" alt="">'
           },
           {
-            html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+7X6NJM+50+7S2Y41" rel="nofollow"><img border="0" width="336" height="280" alt="" src="https://www21.a8.net/svt/bgt?aid=250528019479&wid=001&eno=01&mid=s00000000018047043000&mc=1"></a><img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=455ONN+7X6NJM+50+7S2Y41" alt="">'
+            html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+929KAA+5L4K+5ZMCH" rel="nofollow"><img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=250528019548&wid=001&eno=01&mid=s00000026066001006000&mc=1"></a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=455ONN+929KAA+5L4K+5ZMCH" alt="">'
           },
           {
             html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+958QB6+47GS+HVNAP" rel="nofollow"><img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=250528019553&wid=001&eno=01&mid=s00000019630003003000&mc=1"></a><img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=455ONN+958QB6+47GS+HVNAP" alt="">'
