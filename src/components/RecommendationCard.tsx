@@ -7,17 +7,11 @@ interface RecommendationCardProps {
 
 const RecommendationCard: React.FC<RecommendationCardProps> = ({ recommendation }) => {
   if (recommendation.html) {
-    // Replace width in the HTML string from any existing value to 200px
-    const updatedHtml = recommendation.html
-      .replace(/width:\s*\d+px/g, 'width:200px')
-      .replace(/width="\d+"/g, 'width="200"')
-      .replace(/width=\d+/g, 'width="200"');
-
     return (
       <div 
-        className="w-[200px]"
+        className="w-full h-full flex items-stretch"
         dangerouslySetInnerHTML={{ 
-          __html: updatedHtml.replace(
+          __html: recommendation.html.replace(
             'margin:5px;',
             'margin:0;'
           ).replace(
