@@ -98,10 +98,10 @@ export const results: Result[] = [
         subtitle: "情報を守りたいあなたは、VPNで通信データをガード！",
         items: [
           {
-            html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+7IW90Y+50C8+HWXLD" rel="nofollow"><img border="0" width="320" height="50" alt="" src="https://www21.a8.net/svt/bgt?aid=250528019455&wid=001&eno=01&mid=s00000023372003009000&mc=1"></a><img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=455ONN+7IW90Y+50C8+HWXLD" alt="">'
+            html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+7GIILU+3JTE+15OZHT" rel="nofollow"><img border="0" width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=250528019451&wid=001&eno=01&mid=s00000016565007003000&mc=1"></a><img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=455ONN+7GIILU+3JTE+15OZHT" alt="">'
           },
           {
-            html: '<a href="https://hb.afl.rakuten.co.jp/ichiba/487edb28.b577b04a.487edb2a.b3f40fe4/_RTLink110199?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Favast%2F21461081%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6InVwIiwicHJpY2UiOjAsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;"><img src="https://hbb.afl.rakuten.co.jp/hgb/487edb28.b577b04a.487edb2a.b3f40fe4/?me_id=1430269&item_id=10000022&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Favast%2Fcabinet%2F11268104%2F21461081.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="margin:2px" alt="" title=""></a>'
+            html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+7HPDTE+4R3G+BXYE9" rel="nofollow"><img border="0" width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=250528019453&wid=001&eno=01&mid=s00000022174002006000&mc=1"></a><img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=455ONN+7HPDTE+4R3G+BXYE9" alt="">'
           }
         ]
       }
