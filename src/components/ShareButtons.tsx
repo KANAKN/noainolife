@@ -1,5 +1,5 @@
 import React from 'react';
-import { Share2, Facebook, Instagram } from 'lucide-react';
+import { Share2, Facebook } from 'lucide-react';
 
 interface ShareButtonsProps {
   resultType: string;
@@ -15,10 +15,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   
   const shareToX = () => {
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`, '_blank');
-  };
-  
-  const shareToInstagram = () => {
-    window.open('https://www.instagram.com', '_blank');
   };
   
   const shareToLine = () => {
@@ -46,8 +42,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           <span>X</span>
         </button>
         <button 
-          onClick={shareToInstagram}
-          className="py-3 md:py-2 px-4 bg-[#E4405F] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+          onClick={shareToLine}
+          className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
         >
           <span>LINE</span>
         </button>
