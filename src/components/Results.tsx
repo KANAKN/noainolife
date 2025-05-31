@@ -38,6 +38,21 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
     }
   };
 
+  const getShareImage = (type: string) => {
+    switch (type) {
+      case 'リアリスト型':
+        return '/share-realist.png';
+      case 'ロマンチスト型':
+        return '/share-romantic.png';
+      case 'シンクロニスト型':
+        return '/share-syncronist.png';
+      case 'エスケーパー型':
+        return '/share-escaper.png';
+      default:
+        return '/share-default.png';
+    }
+  };
+
   const typeColor = getTypeColor(result.type);
 
   return (
@@ -95,6 +110,14 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
       <div className="flex justify-center mb-4">
         <ShareButtons resultType={result.type} />
+      </div>
+
+      <div className="flex justify-center mb-8">
+        <img 
+          src={getShareImage(result.type)} 
+          alt={`${result.type}のシェア画像`}
+          className="w-full max-w-2xl rounded-lg shadow-lg"
+        />
       </div>
 
       <div className="bg-gray-50 rounded-xl p-4 mb-4">
