@@ -122,19 +122,19 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         <ShareButtons resultType={result.type} />
       </div>
 
-      <div className="mb-4">
-        <h3 className="text-xl font-bold text-white mb-2 text-center">
+      <div className="bg-gray-50 rounded-xl p-4 mb-4">
+        <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
           PR あなたにおすすめのアイテム
         </h3>
         {result.recommendations.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-6 last:mb-0">
-            <h4 className="text-lg font-medium text-[#ffff30] mb-4 text-center whitespace-pre-line">
+            <h4 className="text-lg font-medium text-gray-700 mb-4 text-center whitespace-pre-line">
               {category.subtitle}
             </h4>
             <div className="flex flex-col items-center gap-4">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="w-full flex justify-center">
-                  <div className="w-full max-w-[320px]">
+                  <div className="w-full max-w-[320px] bg-white rounded-lg shadow-sm p-10">
                     <RecommendationCard recommendation={item} />
                   </div>
                 </div>
