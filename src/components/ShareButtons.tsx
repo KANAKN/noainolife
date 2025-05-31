@@ -50,7 +50,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
       <div className="flex flex-col items-center gap-6">
         <button 
           onClick={downloadImage}
-          className="py-3 px-6 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 w-full max-w-md"
+          className="py-3 px-6 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
         >
           <Download className="w-5 h-5" />
           <span>画像を保存</span>
