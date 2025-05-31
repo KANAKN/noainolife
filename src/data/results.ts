@@ -68,11 +68,13 @@ export const results: Result[] = [
     aiRelationship: "無理にAIを使う必要はありません。AIの動向はざっくり把握しておき「AIと適切に距離を取るための知識」として捉えると気が楽です。AIにはない「身体性」「感性」「共感力」を大切に、あなたらしい人間ライフを楽しみましょう。",
     recommendations: [
       {
-        subtitle:   <>
+        subtitle:(
+  <>
     情報を守りたいあなたは
     <br className="block sm:hidden" />
     、VPNで通信データをガード！
   </>
+)
           ,
         items: [
           {
