@@ -131,10 +131,10 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             <h4 className="text-lg font-medium text-gray-700 mb-4 text-center whitespace-pre-line">
               {category.subtitle}
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 justify-items-center">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="w-full flex justify-center">
-                  <div className="max-w-[200px]">
+                  <div className="w-full">
                     <RecommendationCard recommendation={item} />
                   </div>
                 </div>
