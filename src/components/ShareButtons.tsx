@@ -48,6 +48,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   return (
     <div className="mt-8 mb-8">
       <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-wrap gap-3 justify-center">
         <button 
           onClick={downloadImage}
           className="py-3 px-6 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
@@ -56,7 +57,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           <span>画像を保存</span>
         </button>
 
-        <div className="flex flex-wrap gap-3 justify-center">
           <button 
             onClick={shareToFacebook}
             className="py-3 md:py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
