@@ -133,7 +133,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             </h4>
             <div className="flex flex-wrap justify-center gap-4">
               {category.items.map((item, itemIndex) => (
-                <div key={itemIndex} className="flex justify-center　w-20">
+                <div key={itemIndex} className="flex justify-center">
                   <RecommendationCard recommendation={item} />
                 </div>
               ))}
