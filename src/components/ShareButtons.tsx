@@ -6,7 +6,7 @@ interface ShareButtonsProps {
 }
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
-  const shareUrl = 'https://noainolife.vercel.app/public/';
+  const shareUrl = 'https://noainolife.vercel.app/';
   const shareText = `AIタイプ診断で自分は「${resultType}」でした！\n\n診断はこちら👇\n${shareUrl}`;
   
   const getShareImage = () => {
