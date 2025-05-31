@@ -49,13 +49,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           onClick={shareToInstagram}
           className="py-3 md:py-2 px-4 bg-[#E4405F] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
         >
-          <Instagram className="w-5 h-5" />
-          <span>Instagram</span>
-        </button>
-        <button 
-          onClick={shareToLine}
-          className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
-        >
           <span>LINE</span>
         </button>
       </div>
