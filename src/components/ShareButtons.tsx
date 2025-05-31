@@ -47,7 +47,20 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
 
   return (
     <div className="mt-8 mb-8">
-      <div className="flex justify-center">
+      <div className="flex flex-col items-center gap-6">
+        <button 
+          onClick={downloadImage}
+          className="py-3 px-6 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 w-full max-w-md"
+        >
+          <Download className="w-5 h-5" />
+          <span>診断結果画像を保存</span>
+        </button>
+
+        <h3 className="flex items-center justify-center text-lg font-medium text-[#ffff30]">
+          <Share2 className="w-5 h-5 mr-2" />
+          シェアする
+        </h3>
+
         <div className="flex flex-wrap gap-3 justify-center">
           <button 
             onClick={shareToFacebook}
@@ -67,13 +80,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
             className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             <span>LINE</span>
-          </button>
-          <button 
-            onClick={downloadImage}
-            className="py-3 md:py-2 px-4 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
-          >
-            <Download className="w-5 h-5" />
-            <span>診断結果画像を保存</span>
           </button>
         </div>
       </div>
