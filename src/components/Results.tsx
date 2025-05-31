@@ -131,7 +131,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             <h4 className="text-lg font-medium text-gray-700 mb-4 text-center whitespace-pre-line">
               {category.subtitle}
             </h4>
-            <div className="flex flex-col items-center gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="w-full flex justify-center">
                   <div className="max-w-[320px]">
