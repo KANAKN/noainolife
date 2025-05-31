@@ -1,11 +1,12 @@
-import React from 'react';
-import { Share2, Facebook, Download } from 'lucide-react';
+import React, { useState } from 'react';
+import { Share2, Facebook, Download, Copy, Check } from 'lucide-react';
 
 interface ShareButtonsProps {
   resultType: string;
 }
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
+  const [copied, setCopied] = useState(false);
   const shareUrl = 'https://noainolife.vercel.app/';
   const shareText = `AIタイプ診断の結果「${resultType}」でした！\nあなたのタイプも教えて！\n\n診断はこちら👇\n${shareUrl}\n\n#NOAINOLIFE診断\n#AIタイプ診断`;
   
@@ -19,6 +20,16 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   
   const shareToLine = () => {
     window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank');
+  };
+
+  const copyUrl = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy URL:', err);
+    }
   };
 
   const downloadImage = () => {
@@ -80,6 +91,22 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
             className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             <span>LINE</span>
+          </button>
+          <button 
+            onClick={copyUrl}
+            className="py-3 md:py-2 px-4 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+          >
+            {copied ? (
+              <>
+                <Check className="w-5 h-5" />
+                <span>コピーしました</span>
+              </>
+            ) : (
+              <>
+                <Copy className="w-5 h-5" />
+                <span>URLをコピー</span>
+              </>
+            )}
           </button>
         </div>
       </div>
