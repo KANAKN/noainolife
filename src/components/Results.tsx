@@ -41,13 +41,13 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
   const getShareImage = (type: string) => {
     switch (type) {
       case 'リアリスト型':
-        return '/share-realist.png';
+        return '/real.png';
       case 'ロマンチスト型':
-        return '/share-romantic.png';
+        return '/roman.png';
       case 'シンクロニスト型':
-        return '/share-syncronist.png';
+        return '/sync.png';
       case 'エスケーパー型':
-        return '/share-escaper.png';
+        return '/esc.png';
       default:
         return '/share-default.png';
     }
