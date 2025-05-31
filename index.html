@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial.scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NO AI, NO LIFE AIタイプ診断</title>
 
     <!-- Default Open Graph tags -->
@@ -11,7 +11,7 @@
     <meta property="og:description" content="AIとどう向き合うかで、あなたの価値観が見えてくる" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://noainolife.vercel.app/" />
-    <meta property="og:image" content="https://noainolife.vercel.app/s.png" id="og-image" />
+    <meta property="og:image" content="https://noainolife.vercel.app/share-default.png" id="og-image" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="NO AI, NO LIFE" />
@@ -20,7 +20,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="NO AI, NO LIFE AIタイプ診断" />
     <meta name="twitter:description" content="AIとどう向き合うかで、あなたの価値観が見えてくる" />
-    <meta name="twitter:image" content="https://noainolife.vercel.app/s.png" id="twitter-image" />
+    <meta name="twitter:image" content="https://noainolife.vercel.app/share-default.png" id="twitter-image" />
   </head>
   <body>
     <div id="root"></div>
@@ -33,19 +33,19 @@
         
         switch (type) {
           case 'リアリスト型':
-            imagePath = '/r.png';
+            imagePath = '/share-realist.png';
             break;
           case 'ロマンチスト型':
-            imagePath = '/l.png';
+            imagePath = '/share-romantic.png';
             break;
           case 'シンクロニスト型':
-            imagePath = '/s.png';
+            imagePath = '/share-syncronist.png';
             break;
           case 'エスケーパー型':
-            imagePath = '/e.png';
+            imagePath = '/share-escaper.png';
             break;
           default:
-            imagePath = '/s.png';
+            imagePath = '/share-default.png';
         }
 
         const fullImageUrl = baseUrl + imagePath;
