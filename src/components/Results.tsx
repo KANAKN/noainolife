@@ -38,23 +38,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
     }
   };
 
-  const getTypeImage = (type: string) => {
-    switch (type) {
-      case 'リアリスト型':
-        return '../r.png';
-      case 'ロマンチスト型':
-        return '../l.png';
-      case 'シンクロニスト型':
-        return '../s.png';
-      case 'エスケーパー型':
-        return '../e.png';
-      default:
-        return '../r.png';
-    }
-  };
-
   const typeColor = getTypeColor(result.type);
-  const typeImage = getTypeImage(result.type);
 
   return (
     <div className="w-full animate-fadeIn">
@@ -67,25 +51,18 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           className="p-6"
           style={{ backgroundColor: typeColor }}
         >
-          <div className="flex justify-center mb-4">
-            <img 
-              src={typeImage} 
-              alt={`${result.type} illustration`} 
-              className="w-48 h-48 object-contain"
-            />
-          </div>
           <h2 className="text-3xl font-bold text-white text-center">
             あなたは {result.type}
           </h2>
         </div>
         
         <div className="p-8 space-y-4">
-            <h3 
-              className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
-              style={{ color: typeColor }}
-            >
-              特徴と傾向
-            </h3>          
+          <h3 
+            className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
+            style={{ color: typeColor }}
+          >
+            特徴と傾向
+          </h3>          
           <div className="border-b border-gray-100 pb-4">
             <p className="text-xl font-bold text-gray-800">
               {result.description}

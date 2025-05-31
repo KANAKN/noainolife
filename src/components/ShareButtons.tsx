@@ -9,29 +9,12 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = 'https://noainolife.vercel.app/';
   const shareText = `AIタイプ診断で自分は「${resultType}」でした！\n\n診断はこちら👇\n${shareUrl}`;
   
-  const getShareImage = () => {
-    switch (resultType) {
-      case 'リアリスト型':
-        return `${shareUrl}r.png`;
-      case 'ロマンチスト型':
-        return `${shareUrl}l.png`;
-      case 'シンクロニスト型':
-        return `${shareUrl}s.png`;
-      case 'エスケーパー型':
-        return `${shareUrl}e.png`;
-      default:
-        return `${shareUrl}r.png`;
-    }
-  };
-  
   const shareToFacebook = () => {
-    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
-    window.open(url, '_blank');
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
   };
   
   const shareToX = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
-    window.open(url, '_blank');
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`, '_blank');
   };
   
   const shareToInstagram = () => {
@@ -39,8 +22,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   };
   
   const shareToLine = () => {
-    const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
-    window.open(url, '_blank');
+    window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank');
   };
 
   return (
