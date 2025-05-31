@@ -67,11 +67,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           <span>診断結果画像を保存</span>
         </button>
 
-        <h3 className="flex items-center justify-center text-lg font-medium text-[#ffff30]">
-          <Share2 className="w-5 h-5 mr-2" />
-          シェアする
-        </h3>
-
         <div className="flex flex-wrap gap-3 justify-center">
           <button 
             onClick={shareToFacebook}
