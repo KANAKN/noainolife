@@ -125,7 +125,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
 
       <div className="bg-gray-50 rounded-xl p-4 mb-4">
         <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
-          あなたにおすすめのアイテム
+          PR あなたにおすすめのアイテム
         </h3>
         {result.recommendations.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-6 last:mb-0">
