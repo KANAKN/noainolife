@@ -7,7 +7,7 @@ interface ShareButtonsProps {
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = 'https://noainolife.vercel.app/';
-  const shareText = `AIタイプ診断の結果「${resultType}」でした！\nあなたのタイプも教えて！\n\n診断はこちら👇\n${shareUrl}\n#NOAINOLIFE診断\n#AIタイプ診断`;
+  const shareText = `AIタイプ診断の結果「${resultType}」でした！\nあなたのタイプも教えて！\n\n診断はこちら👇\n${shareUrl}\n\n#NOAINOLIFE診断\n#AIタイプ診断`;
   
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
