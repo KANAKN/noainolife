@@ -30,7 +30,7 @@ export const results: Result[] = [
     aiRelationship: "AIに期待が高まりすぎて、感情を投影しすぎてしまうことも。AIはあくまでツールであることを意識しつつ、「どう活かすか」という視点を持ちましょう。感情や願いを現実行動に結びつけることで、より実りある活用ができます。",
     recommendations: [
       {
-        subtitle: "心にも体にも、n/ご機嫌アイテムを常備しよう！",
+        subtitle: "心にも体にも、\nご機嫌アイテムを常備しよう！",
         items: [
           {
             html: '<a href="https://px.a8.net/svt/ejp?a8mat=455ONN+941V3M+5FC8+5ZEMP" rel="nofollow"><img border="0" width="250" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=250528019551&wid=001&eno=01&mid=s00000025316001005000&mc=1"></a><img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=455ONN+941V3M+5FC8+5ZEMP" alt="">'
