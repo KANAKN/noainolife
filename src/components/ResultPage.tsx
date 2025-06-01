@@ -30,19 +30,25 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
 
   useEffect(() => {
     if (result) {
-      // Update meta tags
-      document.title = `${result.type} - NO AI, NO LIFE AIタイプ診断`;
+      const baseUrl = 'https://noainolife.vercel.app';
+      const imageUrl = `${baseUrl}/share-${type}.png`;
+      const pageUrl = `${baseUrl}/result/${type}`;
+      const title = `${result.type} - AIタイプ診断 / NO AI, NO LIFE`;
+
+      document.title = title;
 
       const metaTags = {
-        'og:title': `${result.type} - NO AI, NO LIFE AIタイプ診断`,
+        'og:title': title,
         'og:description': result.description,
-        'og:url': `https://noainolife.vercel.app/result/${type}`,
-        'og:image': `https://noainolife.vercel.app/share-${type}.png`,
+        'og:url': pageUrl,
+        'og:image': imageUrl,
         'og:image:width': '1200',
         'og:image:height': '630',
-        'twitter:title': `${result.type} - NO AI, NO LIFE AIタイプ診断`,
+        'og:image:alt': `${result.type}の診断結果シェア画像`,
+        'twitter:title': title,
         'twitter:description': result.description,
-        'twitter:image': `https://noainolife.vercel.app/share-${type}.png`
+        'twitter:image': imageUrl,
+        'twitter:image:alt': `${result.type}の診断結果シェア画像`
       };
 
       Object.entries(metaTags).forEach(([key, value]) => {
@@ -63,7 +69,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
   }, [result, type]);
 
   if (!result) {
-    return <Navigate to="/\" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return <Results result={result} totalScore={0} onRestart={onRestart} />;
