@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NO AI, NO LIFE AIタイプ診断</title>
 
-    <!-- Default Open Graph tags -->
+    <!-- Common Open Graph tags -->
     <meta property="og:title" content="NO AI, NO LIFE AIタイプ診断" />
     <meta property="og:description" content="AIとどう向き合うかで、あなたの価値観が見えてくる" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://noainolife.vercel.app/" />
-    <meta property="og:image" content="https://noainolife.vercel.app/share-default.png" id="og-image" />
+    <meta property="og:image" content="https://noainolife.vercel.app/share-default.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="NO AI, NO LIFE" />
@@ -20,43 +20,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="NO AI, NO LIFE AIタイプ診断" />
     <meta name="twitter:description" content="AIとどう向き合うかで、あなたの価値観が見えてくる" />
-    <meta name="twitter:image" content="https://noainolife.vercel.app/share-default.png" id="twitter-image" />
+    <meta name="twitter:image" content="https://noainolife.vercel.app/share-default.png" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script>
-      // Update OG image based on result type
-      function updateOGImage(type) {
-        const baseUrl = 'https://noainolife.vercel.app';
-        let imagePath;
-        
-        switch (type) {
-          case 'リアリスト型':
-            imagePath = '/share-realist.png';
-            break;
-          case 'ロマンチスト型':
-            imagePath = '/share-romantic.png';
-            break;
-          case 'シンクロニスト型':
-            imagePath = '/share-syncronist.png';
-            break;
-          case 'エスケーパー型':
-            imagePath = '/share-escaper.png';
-            break;
-          default:
-            imagePath = '/share-default.png';
-        }
-
-        const fullImageUrl = baseUrl + imagePath;
-        
-        // Update OG and Twitter image meta tags
-        document.getElementById('og-image').setAttribute('content', fullImageUrl);
-        document.getElementById('twitter-image').setAttribute('content', fullImageUrl);
-      }
-
-      // Expose the function globally so it can be called from React
-      window.updateOGImage = updateOGImage;
-    </script>
   </body>
 </html>
