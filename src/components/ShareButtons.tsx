@@ -54,7 +54,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
 
   const handleCopyLink = async () => {
     try {
-      await navigator.clipboard.writeText('https://noainolife.vercel.app/');
+      await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
