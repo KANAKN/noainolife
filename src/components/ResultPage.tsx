@@ -38,13 +38,14 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
         'og:description': result.description,
         'og:url': `https://noainolife.vercel.app/result/${type}`,
         'og:image': `https://noainolife.vercel.app/share-${type}.png`,
+        'og:image:width': '1200',
+        'og:image:height': '630',
         'twitter:title': `${result.type} - NO AI, NO LIFE AIタイプ診断`,
         'twitter:description': result.description,
         'twitter:image': `https://noainolife.vercel.app/share-${type}.png`
       };
 
       Object.entries(metaTags).forEach(([key, value]) => {
-        // Update both property and name meta tags
         const propertySelector = `meta[property="${key}"]`;
         const nameSelector = `meta[name="${key}"]`;
         
@@ -62,7 +63,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
   }, [result, type]);
 
   if (!result) {
-    return <Navigate to="/\" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return <Results result={result} totalScore={0} onRestart={onRestart} />;
