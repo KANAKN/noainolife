@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Quiz from './components/Quiz';
 import ResultPage from './components/ResultPage';
 import Footer from './components/Footer';
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 function App() {
   const [key, setKey] = useState(0);
@@ -21,6 +22,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
+        <SpeedInsights /> {/* ②ここに追加 */}
       </div>
     </BrowserRouter>
   );

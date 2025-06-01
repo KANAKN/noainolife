@@ -86,7 +86,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
           <button
             type="button"
             onClick={handleCopyLink}
-            className="w-40 flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 py-2 px-4 rounded-lg hover:bg-white/20 transition-all"
+            className="w-40 flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 py-2 px-4 rounded-lg hover:bg-white/20 transition-all mt-10"
           >
             {copied ? (
               <>

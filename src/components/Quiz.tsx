@@ -26,11 +26,14 @@ const Quiz: React.FC = () => {
 
   const saveQuizResponse = async (response: QuizResponse) => {
     try {
+      const result = getResultByType(typeCounts);
+      
       const { data: quizResponse, error: responseError } = await supabase
         .from('quiz_responses')
         .insert([{
           age_group: response.ageGroup,
-          gender: response.gender
+          gender: response.gender,
+          result_type: result.type // Add result type to the response
         }])
         .select()
         .single();
