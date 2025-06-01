@@ -13,7 +13,7 @@ const Quiz: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
     'リアリスト型': 0,
-    'ロマンチスト型': 0,
+    'ロマンチスト型': 6,
     'シンクロニスト型': 0,
     'エスケーパー型': 0
   });
