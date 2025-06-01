@@ -12,15 +12,15 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const getShareImage = (type: string) => {
     switch (type) {
       case 'リアリスト型':
-        return 'https://noainolife.vercel.app/share-realist.png';
+        return 'https://noainolife.vercel.app/real.png';
       case 'ロマンチスト型':
-        return 'https://noainolife.vercel.app/share-romantic.png';
+        return 'https://noainolife.vercel.app/roman.png';
       case 'シンクロニスト型':
-        return 'https://noainolife.vercel.app/share-syncronist.png';
+        return 'https://noainolife.vercel.app/sync.png';
       case 'エスケーパー型':
-        return 'https://noainolife.vercel.app/share-escaper.png';
+        return 'https://noainolife.vercel.app/esc.png';
       default:
-        return 'https://noainolife.vercel.app/share-default.png';
+        return 'https://noainolife.vercel.app/women_robot_600.png';
     }
   };
 
