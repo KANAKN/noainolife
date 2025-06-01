@@ -6,31 +6,31 @@ interface ShareButtonsProps {
 }
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
-  const shareUrl = 'https://noainolife.vercel.app/';
-  const shareText = `AIタイプ診断の結果「${resultType}」でした！\nあなたのタイプも教えて！\n\n診断はこちら👇\n${shareUrl}\n\n#NOAINOLIFE診断\n#AIタイプ診断\n#生成AI`;
-  
-  const getShareImage = (type: string) => {
+  const getResultPath = (type: string) => {
     switch (type) {
       case 'リアリスト型':
-        return 'https://noainolife.vercel.app/real.png';
+        return 'realist';
       case 'ロマンチスト型':
-        return 'https://noainolife.vercel.app/roman.png';
+        return 'romantic';
       case 'シンクロニスト型':
-        return 'https://noainolife.vercel.app/sync.png';
+        return 'synchronist';
       case 'エスケーパー型':
-        return 'https://noainolife.vercel.app/esc.png';
+        return 'escaper';
       default:
-        return 'https://noainolife.vercel.app/women_robot_600.png';
+        return '';
     }
   };
 
+  const baseUrl = 'https://noainolife.vercel.app';
+  const resultPath = getResultPath(resultType);
+  const shareUrl = `${baseUrl}/result/${resultPath}`;
+  const shareText = `AIタイプ診断の結果「${resultType}」でした！\nあなたのタイプも教えて！\n\n#NOAINOLIFE診断 #AIタイプ診断 #生成AI`;
+  
   const shareToFacebook = () => {
-    const imageUrl = getShareImage(resultType);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&picture=${encodeURIComponent(imageUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
   };
   
   const shareToX = () => {
-    const imageUrl = getShareImage(resultType);
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
   };
   
@@ -40,8 +40,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
 
   const downloadImage = () => {
     const link = document.createElement('a');
-    link.href = getShareImage(resultType);
-    link.download = `aitype-${resultType}.png`;
+    link.href = `${baseUrl}/share-${resultPath}.png`;
+    link.download = `aitype-${resultPath}.png`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

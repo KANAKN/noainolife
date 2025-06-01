@@ -19,7 +19,7 @@ declare global {
 const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    window.updateOGImage(result.type);
+    window.updateOGImage?.(result.type);
   }, [result.type]);
 
   const getTypeColor = (type: string) => {
@@ -37,22 +37,23 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
     }
   };
 
-  const getShareImage = (type: string) => {
+  const getResultPath = (type: string) => {
     switch (type) {
       case 'リアリスト型':
-        return '/real.png';
+        return 'realist';
       case 'ロマンチスト型':
-        return '/roman.png';
+        return 'romantic';
       case 'シンクロニスト型':
-        return '/sync.png';
+        return 'synchronist';
       case 'エスケーパー型':
-        return '/esc.png';
+        return 'escaper';
       default:
-        return '/share-default.png';
+        return 'default';
     }
   };
 
   const typeColor = getTypeColor(result.type);
+  const resultPath = getResultPath(result.type);
 
   return (
     <div className="w-full animate-fadeIn">
@@ -114,7 +115,7 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         </h3>
         <div className="flex justify-center mb-6">
           <img 
-            src={getShareImage(result.type)} 
+            src={`/share-${resultPath}.png`}
             alt={`${result.type}のシェア画像`}
             className="w-full max-w-2xl rounded-lg shadow-lg"
           />
