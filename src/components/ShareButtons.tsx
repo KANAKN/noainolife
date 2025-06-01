@@ -25,7 +25,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
 
   const baseUrl = 'https://noainolife.vercel.app';
   const resultPath = getResultPath(resultType);
-  const shareUrl = `${baseUrl}/result/${resultPath}`;
+  const shareUrl = `${baseUrl}`;
   const shareText = `AIタイプ診断したら「${resultType}」でした！\nあなたのタイプも教えて！\n\n#AIタイプ診断\n#生成AI\n#NOAINOLIFE`;
   
   const shareToFacebook = () => {
