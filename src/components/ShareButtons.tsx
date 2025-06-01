@@ -27,20 +27,23 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareText = `AIタイプ診断の結果「${resultType}」でした！\nあなたのタイプも教えて！\n\n#NOAINOLIFE診断 #AIタイプ診断 #生成AI`;
   
   const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    window.open(url, '_blank', 'width=600,height=400');
   };
   
   const shareToX = () => {
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    window.open(url, '_blank', 'width=600,height=400');
   };
   
   const shareToLine = () => {
-    window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`, '_blank');
+    const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+    window.open(url, '_blank', 'width=600,height=600');
   };
 
   const downloadImage = () => {
     const link = document.createElement('a');
-    link.href = `${baseUrl}/share-${resultPath}.png`;
+    link.href = `/share-${resultPath}.png`;
     link.download = `aitype-${resultPath}.png`;
     document.body.appendChild(link);
     link.click();

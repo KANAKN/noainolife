@@ -32,34 +32,37 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
     if (result) {
       // Update meta tags
       document.title = `${result.type} - NO AI, NO LIFE AIタイプ診断`;
-      
-      const updateMetaTag = (selector: string, content: string) => {
-        const element = document.querySelector(selector);
-        if (element) {
-          element.setAttribute('content', content);
-        }
+
+      const metaTags = {
+        'og:title': `${result.type} - NO AI, NO LIFE AIタイプ診断`,
+        'og:description': result.description,
+        'og:url': `https://noainolife.vercel.app/result/${type}`,
+        'og:image': `https://noainolife.vercel.app/share-${type}.png`,
+        'twitter:title': `${result.type} - NO AI, NO LIFE AIタイプ診断`,
+        'twitter:description': result.description,
+        'twitter:image': `https://noainolife.vercel.app/share-${type}.png`
       };
 
-      // Common meta tags
-      updateMetaTag('meta[property="og:title"]', `${result.type} - NO AI, NO LIFE AIタイプ診断`);
-      updateMetaTag('meta[property="og:description"]', result.description);
-      updateMetaTag('meta[property="og:url"]', `https://noainolife.vercel.app/result/${type}`);
-      updateMetaTag('meta[property="og:image"]', `https://noainolife.vercel.app/share-${type}.png`);
-      
-      // Twitter specific meta tags
-      updateMetaTag('meta[name="twitter:title"]', `${result.type} - NO AI, NO LIFE AIタイプ診断`);
-      updateMetaTag('meta[name="twitter:description"]', result.description);
-      updateMetaTag('meta[name="twitter:image"]', `https://noainolife.vercel.app/share-${type}.png`);
+      Object.entries(metaTags).forEach(([key, value]) => {
+        // Update both property and name meta tags
+        const propertySelector = `meta[property="${key}"]`;
+        const nameSelector = `meta[name="${key}"]`;
+        
+        const propertyElement = document.querySelector(propertySelector);
+        const nameElement = document.querySelector(nameSelector);
 
-      // Update image for sharing
-      if (window.updateOGImage) {
-        window.updateOGImage(result.type);
-      }
+        if (propertyElement) {
+          propertyElement.setAttribute('content', value);
+        }
+        if (nameElement) {
+          nameElement.setAttribute('content', value);
+        }
+      });
     }
   }, [result, type]);
 
   if (!result) {
-    return <Navigate to="/\" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return <Results result={result} totalScore={0} onRestart={onRestart} />;
