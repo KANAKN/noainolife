@@ -32,8 +32,8 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
     if (result) {
       const baseUrl = 'https://noainolife.vercel.app';
       const imageUrl = `${baseUrl}/share-${type}.png`;
-      const pageUrl = `${baseUrl}`;
-      const title = `AIタイプ診断 / NO AI, NO LIFE`;
+      const pageUrl = `${baseUrl}/result/${type}`;
+      const title = `${result.type} - AIタイプ診断 / NO AI, NO LIFE`;
 
       document.title = title;
 
@@ -48,7 +48,8 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
         'twitter:title': title,
         'twitter:description': result.description,
         'twitter:image': imageUrl,
-        'twitter:image:alt': `${type}-img`
+        'twitter:image:alt': `${type}-img`,
+        'twitter:url': pageUrl
       };
 
       Object.entries(metaTags).forEach(([key, value]) => {
@@ -69,7 +70,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
   }, [result, type]);
 
   if (!result) {
-    return <Navigate to="/\" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return <Results result={result} totalScore={0} onRestart={onRestart} />;
