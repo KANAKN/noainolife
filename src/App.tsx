@@ -22,7 +22,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
-        <SpeedInsights /> {/* ②ここに追加 同期してくれ*/}
+        <SpeedInsights /> {/* ②ここに追加 同期してくれ　同期がおかしい*/}
       </div>
     </BrowserRouter>
   );
