@@ -59,7 +59,7 @@ const ResultPage: React.FC<ResultPageProps> = ({ onRestart }) => {
   }, [result, type]);
 
   if (!result) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/\" replace />;
   }
 
   return <Results result={result} totalScore={0} onRestart={onRestart} />;
