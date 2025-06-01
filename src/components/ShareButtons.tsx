@@ -1,11 +1,13 @@
-import React from 'react';
-import { Share2, Facebook, Download } from 'lucide-react';
+import React, { useState } from 'react';
+import { Share2, Facebook, Download, Copy, Check } from 'lucide-react';
 
 interface ShareButtonsProps {
   resultType: string;
 }
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
+  const [copied, setCopied] = useState(false);
+
   const getResultPath = (type: string) => {
     switch (type) {
       case 'リアリスト型':
@@ -50,6 +52,16 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     document.body.removeChild(link);
   };
 
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText('https://noainolife.vercel.app/');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy link:', err);
+    }
+  };
+
   return (
     <div className="mt-8 mb-8">
       <div className="flex flex-col items-center gap-6">
@@ -79,6 +91,22 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
             className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             <span>LINE</span>
+          </button>
+          <button 
+            onClick={handleCopyLink}
+            className="py-3 md:py-2 px-4 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+          >
+            {copied ? (
+              <>
+                <Check className="w-5 h-5" />
+                <span>コピーしました</span>
+              </>
+            ) : (
+              <>
+                <Copy className="w-5 h-5" />
+                <span>URLをコピー</span>
+              </>
+            )}
           </button>
         </div>
       </div>
