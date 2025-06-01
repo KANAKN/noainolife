@@ -118,7 +118,7 @@ const Quiz: React.FC = () => {
             6つの質問に答えて、あなたのAIタイプを診断します。
           </p>
           <p className="text-base text-white mb-2">
-            診断結果では、あなたに合ったヒントやおすすめ（※PRです）も紹介します。
+            診断結果では、あなたに合ったヒントやおすすめ［PR］も紹介します。
           </p>
           <p className="text-base text-white mb-2">
             診断結果はSNSでシェア！
