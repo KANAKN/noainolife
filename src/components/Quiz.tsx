@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { questions } from '../data/questions';
 import { getResultByType } from '../data/results';
 import { Option, TypeCount, UserInfo, QuizResponse } from '../types';
 import Question from './Question';
 import ProgressBar from './ProgressBar';
+import Results from './Results';
 import UserInfoForm from './UserInfoForm';
 import { supabase } from '../lib/supabase';
 
 const Quiz: React.FC = () => {
-  const navigate = useNavigate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [typeCounts, setTypeCounts] = useState<TypeCount>({
@@ -18,6 +17,7 @@ const Quiz: React.FC = () => {
     'シンクロニスト型': 0,
     'エスケーパー型': 0
   });
+  const [isComplete, setIsComplete] = useState(false);
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
 
   const handleUserInfoSubmit = (info: UserInfo) => {
@@ -78,11 +78,21 @@ const Quiz: React.FC = () => {
         };
         await saveQuizResponse(quizResponse);
       }
-      
-      const result = getResultByType(newTypeCounts);
-      const resultType = result.type.replace('型', '');
-      navigate(`/result/${encodeURIComponent(resultType.toLowerCase())}`);
+      setIsComplete(true);
     }
+  };
+
+  const handleRestart = () => {
+    setCurrentQuestionIndex(0);
+    setSelectedOptions([]);
+    setTypeCounts({
+      'リアリスト型': 0,
+      'ロマンチスト型': 0,
+      'シンクロニスト型': 0,
+      'エスケーパー型': 0
+    });
+    setIsComplete(false);
+    setUserInfo(null);
   };
 
   const renderHeader = () => (
@@ -90,7 +100,7 @@ const Quiz: React.FC = () => {
       <div>
         <div className="flex justify-center mb-8">
           <img
-            src="/women_robot_600.png"
+            src="../women_robot_600.png"
             alt="Human and AI face to face"
             className="w-100 md:w-3/5 object-contain"
           />
@@ -125,6 +135,15 @@ const Quiz: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         {renderHeader()}
         <UserInfoForm onSubmit={handleUserInfoSubmit} />
+      </div>
+    );
+  }
+
+  if (isComplete) {
+    const result = getResultByType(typeCounts);
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <Results result={result} totalScore={0} onRestart={handleRestart} />
       </div>
     );
   }
