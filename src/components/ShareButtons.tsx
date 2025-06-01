@@ -9,12 +9,29 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   const shareUrl = 'https://noainolife.vercel.app/';
   const shareText = `AIタイプ診断の結果「${resultType}」でした！\nあなたのタイプも教えて！\n\n診断はこちら👇\n${shareUrl}\n\n#NOAINOLIFE診断\n#AIタイプ診断\n#生成AI`;
   
+  const getShareImage = (type: string) => {
+    switch (type) {
+      case 'リアリスト型':
+        return 'https://noainolife.vercel.app/share-realist.png';
+      case 'ロマンチスト型':
+        return 'https://noainolife.vercel.app/share-romantic.png';
+      case 'シンクロニスト型':
+        return 'https://noainolife.vercel.app/share-syncronist.png';
+      case 'エスケーパー型':
+        return 'https://noainolife.vercel.app/share-escaper.png';
+      default:
+        return 'https://noainolife.vercel.app/share-default.png';
+    }
+  };
+
   const shareToFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
+    const imageUrl = getShareImage(resultType);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&picture=${encodeURIComponent(imageUrl)}&quote=${encodeURIComponent(shareText)}`, '_blank');
   };
   
   const shareToX = () => {
-    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`, '_blank');
+    const imageUrl = getShareImage(resultType);
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`, '_blank');
   };
   
   const shareToLine = () => {
@@ -22,23 +39,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
   };
 
   const downloadImage = () => {
-    const getImagePath = (type: string) => {
-      switch (type) {
-        case 'リアリスト型':
-          return '/real.png';
-        case 'ロマンチスト型':
-          return '/roman.png';
-        case 'シンクロニスト型':
-          return '/sync.png';
-        case 'エスケーパー型':
-          return '/esc.png';
-        default:
-          return '/share-default.png';
-      }
-    };
-
     const link = document.createElement('a');
-    link.href = getImagePath(resultType);
+    link.href = getShareImage(resultType);
     link.download = `aitype-${resultType}.png`;
     document.body.appendChild(link);
     link.click();
