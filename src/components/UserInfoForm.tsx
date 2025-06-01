@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { UserInfo } from '../types';
+import { Copy, Check } from 'lucide-react';
 
 interface UserInfoFormProps {
   onSubmit: (userInfo: UserInfo) => void;
 }
 
 const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
-  const [ageGroup, setAgeGroup] = React.useState('');
-  const [gender, setGender] = React.useState('');
+  const [ageGroup, setAgeGroup] = useState('');
+  const [gender, setGender] = useState('');
+  const [copied, setCopied] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (ageGroup && gender) {
       onSubmit({ ageGroup, gender });
+    }
+  };
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText('https://noainolife.vercel.app/');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy link:', err);
     }
   };
 
@@ -65,9 +77,27 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity mb-8"
+          className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity mb-4"
         >
           診断を始める
+        </button>
+
+        <button
+          type="button"
+          onClick={handleCopyLink}
+          className="w-full flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 py-2 px-4 rounded-lg hover:bg-white/20 transition-all"
+        >
+          {copied ? (
+            <>
+              <Check className="w-4 h-4" />
+              コピーしました
+            </>
+          ) : (
+            <>
+              <Copy className="w-4 h-4" />
+              URLをコピー
+            </>
+          )}
         </button>
       </form>
     </div>
