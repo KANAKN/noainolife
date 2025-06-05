@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UserInfo } from '../types';
-import { Copy, Check, Facebook } from 'lucide-react';
+import { Copy, Check, Facebook, Sparkles } from 'lucide-react';
 
 interface UserInfoFormProps {
   onSubmit: (userInfo: UserInfo) => void;
@@ -106,8 +106,10 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
         </div>
 
         <div className="text-center mb-6">
-          <p className="text-[#ffff30] text-sm font-bold mb-4">            
-            AIタイプ診断をシェアする</p>
+          <p className="text-[#ffff30] text-sm font-bold mb-4 flex items-center justify-center">
+            <Sparkles className="w-5 h-5 mr-2" />
+            AIタイプ診断をシェアする
+          </p>
           <div className="flex justify-center gap-3 mb-8">
             <button
               type="button"
