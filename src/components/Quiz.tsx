@@ -8,7 +8,7 @@ import ProgressBar from './ProgressBar';
 import Results from './Results';
 import UserInfoForm from './UserInfoForm';
 import { supabase } from '../lib/supabase';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Facebook } from 'lucide-react';
 
 const Quiz: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -124,6 +124,23 @@ const Quiz: React.FC = () => {
     setUserInfo(null);
   };
 
+  const shareToFacebook = () => {
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://noainolife.vercel.app/')}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+  
+  const shareToX = () => {
+    const text = 'AIタイプ診断で、あなたのAIとの向き合い方を診断してみよう！\n\n#AIタイプ診断 #生成AI #NOAINOLIFE';
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://noainolife.vercel.app/')}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+  
+  const shareToLine = () => {
+    const text = 'AIタイプ診断で、あなたのAIとの向き合い方を診断してみよう！';
+    const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent('https://noainolife.vercel.app/')}&text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'width=600,height=600');
+  };
+
   const renderHeader = () => (
     <div className="w-[90%] md:w-[60%] mx-auto mb-12">
       <div>
@@ -149,11 +166,32 @@ const Quiz: React.FC = () => {
           <p className="text-base text-white mb-2">
             診断結果では、あなたに合ったヒントやおすすめ〈PR〉も紹介します。
           </p>
-          <p className="text-base text-white mb-2">
+          <p className="text-base text-white mb-4">
             診断結果はSNSでシェア！
             <br />
             #NoAINoLife診断 #AIタイプ診断 #生成AI
           </p>
+          <div className="flex justify-center gap-3 mt-6">
+            <button 
+              onClick={shareToFacebook}
+              className="py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            >
+              <Facebook className="w-5 h-5" />
+              <span>Facebook</span>
+            </button>
+            <button 
+              onClick={shareToX}
+              className="py-2 px-4 bg-black text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            >
+              <span>X</span>
+            </button>
+            <button 
+              onClick={shareToLine}
+              className="py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            >
+              <span>LINE</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
