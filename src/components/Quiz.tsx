@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { questions } from '../data/questions';
 import { getResultByType } from '../data/results';
 import { Option, TypeCount, UserInfo, QuizResponse } from '../types';
@@ -179,13 +180,6 @@ const Quiz: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="w-full max-w-2xl mx-auto">
-        <button
-          onClick={handleBack}
-          className="mb-6 flex items-center text-white hover:text-white/80 transition-colors"
-        >
-          <ArrowLeft className="w-5 h-5 mr-2" />
-          戻る
-        </button>
         <ProgressBar 
           currentStep={currentQuestionIndex + 1} 
           totalSteps={questions.length} 
@@ -196,6 +190,15 @@ const Quiz: React.FC = () => {
             selectedOption={selectedOptions[currentQuestionIndex] || null}
             onSelectOption={handleOptionSelect}
           />
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={handleBack}
+              className="flex items-center text-white hover:text-white/80 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              戻る
+            </button>
+          </div>
         </div>
       </div>
     </div>
