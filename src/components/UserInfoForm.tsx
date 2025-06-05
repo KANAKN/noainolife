@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UserInfo } from '../types';
-import { Copy, Check, ArrowLeft } from 'lucide-react';
+import { Copy, Check, Facebook } from 'lucide-react';
 
 interface UserInfoFormProps {
   onSubmit: (userInfo: UserInfo) => void;
@@ -16,6 +16,23 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
     if (ageGroup && gender) {
       onSubmit({ ageGroup, gender });
     }
+  };
+
+  const shareToFacebook = () => {
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://noainolife.vercel.app/')}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+  
+  const shareToX = () => {
+    const text = 'AIタイプ診断で、あなたのAIとの向き合い方を診断してみよう！\n\n#AIタイプ診断 #生成AI #NOAINOLIFE';
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://noainolife.vercel.app/')}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+  
+  const shareToLine = () => {
+    const text = 'AIタイプ診断で、あなたのAIとの向き合い方を診断してみよう！';
+    const url = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent('https://noainolife.vercel.app/')}&text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'width=600,height=600');
   };
 
   const handleCopyLink = async () => {
@@ -77,16 +94,44 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity mb-4"
+          className="w-full bg-gradient-to-r from-[#af24d6] to-[#9d1939] text-white font-bold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity mb-8"
         >
           診断を始める
         </button>
+
+        <div className="text-center mb-6">
+          <p className="text-[#ffff30] text-sm font-bold mb-4">AIタイプ診断をシェアする</p>
+          <div className="flex justify-center gap-3 mb-8">
+            <button
+              type="button"
+              onClick={shareToFacebook}
+              className="py-2 px-4 bg-[#1877F2] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            >
+              <Facebook className="w-5 h-5" />
+              <span>Facebook</span>
+            </button>
+            <button
+              type="button"
+              onClick={shareToX}
+              className="py-2 px-4 bg-black text-white rounded-lg hover:opacity-90 transition-opacity"
+            >
+              X
+            </button>
+            <button
+              type="button"
+              onClick={shareToLine}
+              className="py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity"
+            >
+              LINE
+            </button>
+          </div>
+        </div>
 
         <div className="flex justify-center">
           <button
             type="button"
             onClick={handleCopyLink}
-            className="w-40 flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 py-2 px-4 rounded-lg hover:bg-white/20 transition-all mt-10"
+            className="w-40 flex items-center justify-center gap-2 bg-white/10 text-white border border-white/20 py-2 px-4 rounded-lg hover:bg-white/20 transition-all"
           >
             {copied ? (
               <>
