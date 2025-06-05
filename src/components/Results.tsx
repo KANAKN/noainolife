@@ -120,7 +120,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             className="w-full max-w-2xl rounded-lg shadow-lg"
           />
         <ShareButtons resultType={result.type} />
-
         </div>
       </div>
 
