@@ -95,7 +95,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           </button>
           <button 
             onClick={handleCopyLink}
-            className="py-3 md:py-2 px-4 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            className="py-3 md:py-2 px-4  mb-3 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             {copied ? (
               <>
