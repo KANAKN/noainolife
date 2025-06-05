@@ -93,22 +93,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           >
             <span>LINE</span>
           </button>
-          <button 
-            onClick={handleCopyLink}
-            className="py-3 md:py-2 px-4 mb-0 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
-          >
-            {copied ? (
-              <>
-                <Check className="w-5 h-5" />
-                <span>コピーしました</span>
-              </>
-            ) : (
-              <>
-                <Copy className="w-5 h-5" />
-                <span>AIタイプ診断のURLをコピー</span>
-              </>
-            )}
-          </button>
         </div>
       </div>
     </div>
