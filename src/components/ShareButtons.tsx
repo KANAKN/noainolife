@@ -52,16 +52,17 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
     document.body.removeChild(link);
   };
 
-  const handleCopyLink = async () => {
+
+    const handleCopyLink = async () => {
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      await navigator.clipboard.writeText('https://noainolife.vercel.app/');
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error('Failed to copy link:', err);
     }
   };
-
+  
   return (
     <div className="mt-8 mb-8">
       <div className="flex flex-col items-center gap-6">
