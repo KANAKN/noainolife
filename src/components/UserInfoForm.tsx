@@ -99,6 +99,15 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
           診断を始める
         </button>
 
+        <div className="relative mb-8">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-white/20"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <span className="bg-[#090034] px-4 text-white/60 text-sm">または</span>
+          </div>
+        </div>
+
         <div className="text-center mb-6">
           <p className="text-[#ffff30] text-sm font-bold mb-4">AIタイプ診断をシェアする</p>
           <div className="flex justify-center gap-3 mb-8">
