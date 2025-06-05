@@ -51,6 +51,15 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
         return 'default';
     }
   };
+    const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText('https://noainolife.vercel.app/');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy link:', err);
+    }
+  };
 
   const typeColor = getTypeColor(result.type);
   const resultPath = getResultPath(result.type);
@@ -122,6 +131,24 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             className="w-full max-w-2xl rounded-lg shadow-lg"
           />
         </div>
+                  <button 
+            onClick={handleCopyLink}
+            className="py-3 md:py-2 px-4 mb-0 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+          >
+            {copied ? (
+              <>
+                <Check className="w-5 h-5" />
+                <span>コピーしました</span>
+              </>
+            ) : (
+              <>
+                <Copy className="w-5 h-5" />
+                <span>AIタイプ診断のURLをコピー</span>
+              </>
+            )}
+          </button>
+
+      
       </div>
 
       <div className="bg-gray-50 rounded-xl p-4 mb-4">
