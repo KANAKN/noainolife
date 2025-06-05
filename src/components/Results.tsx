@@ -61,6 +61,9 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
     }
   };
 
+  const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
+  const [copied, setCopied] = useState(false);
+    
   const typeColor = getTypeColor(result.type);
   const resultPath = getResultPath(result.type);
 
