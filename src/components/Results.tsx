@@ -113,6 +113,8 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
           <Sparkles className="w-5 h-5 mr-2" />
           結果をシェアしよう
         </h3>
+        <ShareButtons resultType={result.type} />
+
         <div className="flex justify-center mb-6">
           <img 
             src={`/share-${resultPath}.png`}
@@ -120,7 +122,6 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             className="w-full max-w-2xl rounded-lg shadow-lg"
           />
         </div>
-        <ShareButtons resultType={result.type} />
       </div>
 
       <div className="bg-gray-50 rounded-xl p-4 mb-4">
