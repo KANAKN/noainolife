@@ -103,9 +103,6 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-white/20"></div>
           </div>
-          <div className="relative flex justify-center">
-            <span className="bg-[#090034] px-4 text-white/60 text-sm">または</span>
-          </div>
         </div>
 
         <div className="text-center mb-6">
