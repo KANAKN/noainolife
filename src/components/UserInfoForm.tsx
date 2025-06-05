@@ -106,9 +106,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
         </div>
 
         <div className="text-center mb-6">
-          <p className="text-[#ffff30] text-sm font-bold mb-4">
-          <Sparkles className="w-5 h-5 mr-2" />
-            
+          <p className="text-[#ffff30] text-sm font-bold mb-4">            
             AIタイプ診断をシェアする</p>
           <div className="flex justify-center gap-3 mb-8">
             <button
