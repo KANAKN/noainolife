@@ -111,16 +111,16 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
       <div className="mt-8 mb-4">
         <h3 className="flex items-center justify-center text-lg font-medium text-[#ffff30] mb-6">
           <Sparkles className="w-5 h-5 mr-2" />
-          結果をシェアしよう
+          ＜あなたのシェア用画像＞
         </h3>
-        <ShareButtons resultType={result.type} />
-
         <div className="flex justify-center mb-6">
           <img 
             src={`/share-${resultPath}.png`}
             alt={`${result.type}のシェア画像`}
             className="w-full max-w-2xl rounded-lg shadow-lg"
           />
+        <ShareButtons resultType={result.type} />
+
         </div>
       </div>
 
