@@ -89,13 +89,13 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           </button>
           <button 
             onClick={shareToLine}
-            className="py-3 md:py-2 px-4 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            className="py-3 md:py-2 px-4  mb-10 bg-[#00B900] text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             <span>LINE</span>
           </button>
           <button 
             onClick={handleCopyLink}
-            className="py-3 md:py-2 px-4  mb-10 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+            className="py-3 md:py-2 px-4 bg-gray-600 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
             {copied ? (
               <>
