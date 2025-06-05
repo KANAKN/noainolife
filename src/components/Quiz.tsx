@@ -7,6 +7,7 @@ import ProgressBar from './ProgressBar';
 import Results from './Results';
 import UserInfoForm from './UserInfoForm';
 import { supabase } from '../lib/supabase';
+import { ArrowLeft } from 'lucide-react';
 
 const Quiz: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -24,6 +25,30 @@ const Quiz: React.FC = () => {
     setUserInfo(info);
   };
 
+  const handleBack = () => {
+    if (currentQuestionIndex > 0) {
+      const newSelectedOptions = [...selectedOptions];
+      const removedOption = newSelectedOptions[currentQuestionIndex - 1];
+      if (removedOption) {
+        const newTypeCounts = { ...typeCounts };
+        newTypeCounts[removedOption.type] = Math.max(0, (newTypeCounts[removedOption.type] || 0) - 1);
+        setTypeCounts(newTypeCounts);
+      }
+      newSelectedOptions[currentQuestionIndex - 1] = null;
+      setSelectedOptions(newSelectedOptions);
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+    } else {
+      setUserInfo(null);
+      setSelectedOptions([]);
+      setTypeCounts({
+        'リアリスト型': 0,
+        'ロマンチスト型': 0,
+        'シンクロニスト型': 0,
+        'エスケーパー型': 0
+      });
+    }
+  };
+
   const saveQuizResponse = async (response: QuizResponse) => {
     try {
       const result = getResultByType(typeCounts);
@@ -33,7 +58,7 @@ const Quiz: React.FC = () => {
         .insert([{
           age_group: response.ageGroup,
           gender: response.gender,
-          result_type: result.type // Add result type to the response
+          result_type: result.type
         }])
         .select()
         .single();
@@ -154,6 +179,13 @@ const Quiz: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="w-full max-w-2xl mx-auto">
+        <button
+          onClick={handleBack}
+          className="mb-6 flex items-center text-white hover:text-white/80 transition-colors"
+        >
+          <ArrowLeft className="w-5 h-5 mr-2" />
+          戻る
+        </button>
         <ProgressBar 
           currentStep={currentQuestionIndex + 1} 
           totalSteps={questions.length} 

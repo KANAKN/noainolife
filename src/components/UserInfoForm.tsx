@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UserInfo } from '../types';
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check, ArrowLeft } from 'lucide-react';
 
 interface UserInfoFormProps {
   onSubmit: (userInfo: UserInfo) => void;
