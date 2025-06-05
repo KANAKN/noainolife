@@ -70,7 +70,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
           className="py-3 px-6 bg-gray-700 text-white rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
         >
           <Download className="w-5 h-5" />
-          <span>画像を保存</span>
+          <span>診断結果を保存</span>
         </button>
         <div className="flex flex-wrap gap-3 justify-center">
           <button 
@@ -104,7 +104,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ resultType }) => {
             ) : (
               <>
                 <Copy className="w-5 h-5" />
-                <span>URLをコピー</span>
+                <span>AIタイプ診断のURLをコピー</span>
               </>
             )}
           </button>
