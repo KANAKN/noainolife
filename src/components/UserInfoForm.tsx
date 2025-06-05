@@ -96,7 +96,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({ onSubmit }) => {
             ) : (
               <>
                 <Copy className="w-4 h-4" />
-                URLをコピー
+                AIタイプ診断のURLをコピー
               </>
             )}
           </button>
