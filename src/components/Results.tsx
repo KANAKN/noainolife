@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Result } from '../types';
 import RecommendationCard from './RecommendationCard';
 import ShareButtons from './ShareButtons';
+import CompatibilityChart from './CompatibilityChart';
 import { Sparkles } from 'lucide-react';
 
 interface ResultsProps {
@@ -87,15 +88,15 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             </p>
           </div>
           <div>
-            <h3 
+            <h3
               className="text-sm font-semibold uppercase tracking-wider mb-2 text-left"
               style={{ color: typeColor }}
             >
               あなたへのヒント
             </h3>
-            <div 
+            <div
               className="border-l-4 p-4 rounded"
-              style={{ 
+              style={{
                 backgroundColor: `${typeColor}15`,
                 borderColor: typeColor
               }}
@@ -106,6 +107,15 @@ const Results: React.FC<ResultsProps> = ({ result, totalScore, onRestart }) => {
             </div>
           </div>
         </div>
+        <div
+          className="p-6"
+          style={{ backgroundColor: typeColor }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center">
+            あなたと相性の良いAIタイプ
+          </h2>
+        </div>
+        <CompatibilityChart compatibility={result.compatibility} typeColor={typeColor} />
       </div>
 
       <div className="mt-8 mb-4">

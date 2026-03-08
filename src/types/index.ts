@@ -10,12 +10,19 @@ export interface Option {
   type: 'リアリスト型' | 'ロマンチスト型' | 'シンクロニスト型' | 'エスケーパー型';
 }
 
+export interface CompatibilityEntry {
+  type: string;
+  stars: 3 | 2 | null; // 3=★★★, 2=★★, null=？
+  description?: string;
+}
+
 export interface Result {
   type: string;
   description: string;
   description2: string;
   aiRelationship: string;
   cautionPoint: string;
+  compatibility: CompatibilityEntry[];
   recommendations: RecommendationCategory[];
 }
 

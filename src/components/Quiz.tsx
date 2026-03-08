@@ -51,9 +51,10 @@ const Quiz: React.FC = () => {
   };
 
   const saveQuizResponse = async (response: QuizResponse) => {
+    if (!supabase) return;
     try {
       const result = getResultByType(typeCounts);
-      
+
       const { data: quizResponse, error: responseError } = await supabase
         .from('quiz_responses')
         .insert([{
